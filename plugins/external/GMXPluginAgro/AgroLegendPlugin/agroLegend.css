@@ -1,0 +1,27 @@
+.legendColor {
+    width: 24px;
+    height: 15px;
+    margin-bottom: 2px;
+    margin-right: 5px;
+    margin-top: 3px;
+}
+
+.legendColorh {
+    width: 4px;
+    height: 25px;
+    margin-bottom: 2px;
+    margin-right: 5px;
+    margin-top: 3px;
+}
+
+.legendLabelh {
+    width: 4px;
+}
+
+.ui-state-default .ui-icon.ui-icon-helpthick {
+    background: url(help.png) 0px 0px;
+}
+
+.ui-state-hover .ui-icon.ui-icon-helpthick {
+    background: url(help_orange.png) 0px 0px;
+}

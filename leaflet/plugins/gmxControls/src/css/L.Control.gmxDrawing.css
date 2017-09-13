@@ -1,0 +1,24 @@
+.leaflet-gmx-icon-Point {
+    background-position: -235px 2px;
+}
+.leaflet-gmx-icon-Point-active {
+    background-position: -235px -24px;
+}
+.leaflet-gmx-icon-Polygon {
+    background-position: -499px 2px;
+}
+.leaflet-gmx-icon-Polygon-active {
+    background-position: -499px -24px;
+}
+.leaflet-gmx-icon-Rectangle {
+    background-position: -266px 2px;
+}
+.leaflet-gmx-icon-Rectangle-active {
+    background-position: -266px -24px;
+}
+.leaflet-gmx-icon-Polyline {
+    background-position: -389px 2px;
+}
+.leaflet-gmx-icon-Polyline-active {
+    background-position: -389px -25px;
+}

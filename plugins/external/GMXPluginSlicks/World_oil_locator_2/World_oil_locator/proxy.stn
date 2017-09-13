@@ -1,0 +1,10 @@
+proxy (proxy on is 1; off 0):
+0
+http_proxy
+192.168.4.6:3030
+ftp_proxy
+192.168.4.6:3030
+PROXYUSER (0 if no):
+0
+PROXYPASSWORD:
+213

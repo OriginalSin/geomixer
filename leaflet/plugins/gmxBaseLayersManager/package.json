@@ -1,0 +1,28 @@
+{
+  "name": "gmx-base-layers-manager",
+  "version": "0.0.1",
+  "description": "Leaflet.GeoMixer base layers manager",
+  "main": "src/gmxBaseLayersManager.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "postinstall": "npm run examples",
+    "examples": "browserify examples/browserify.js > examples/browserify_bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ScanEx/Leaflet.gmxBaseLayersManager.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ScanEx/Leaflet.gmxBaseLayersManager/issues"
+  },
+  "homepage": "https://github.com/ScanEx/Leaflet.gmxBaseLayersManager#readme",
+  "dependencies": {
+    "leaflet": "^0.7.7",
+    "leaflet-geomixer": "github:scanex/leaflet-geomixer",
+    "leaflet-tilelayer-mercator": "github:scanex/leaflet.tilelayer.mercator"
+  }
+}

@@ -1,0 +1,46 @@
+<div class="drawingObjectsListNode ui-widget-content gmx-listNode {{#if isLast}}drawingObjectsListNode_last{{/if}}">
+    <div class="gmx-table">
+        <div class="gmx-table-cell drawingObjectsListNode-iconCell">
+            <div class="drawingObjectsListNode-iconContainer">
+                <div class="
+                    {{#if isRadio}}icon-radio{{else}}icon-check{{/if}}
+                    drawingObjectsListNode-icon 
+                    drawingObjectsListNode-checkIcon
+                    {{#unless selected}}
+                    drawingObjectsListNode-icon_inactive
+                    drawingObjectsListNode-icon_hidable
+                    {{/unless}}">
+                </div>
+            </div>
+        </div>
+        <div class="gmx-table-cell drawingObjectsListNode-titleCell">
+            <div class="drawingObjectsListNode-info">
+                {{name}} ({{info}})
+            </div>
+        </div>
+        {{#if showStyleButton}}
+        <div class="gmx-table-cell drawingObjectsListNode-iconCell">
+            <div class="drawingObjectsListNode-iconContainer">
+                <div class="
+                    icon-pencil
+                    drawingObjectsListNode-icon
+                    drawingObjectsListNode-icon_hidable
+                    drawingObjectsListNode-styleIcon">
+                </div>
+            </div>
+        </div>
+        {{/if}}
+        {{#if showRemoveButton}}
+        <div class="gmx-table-cell drawingObjectsListNode-iconCell">
+            <div class="drawingObjectsListNode-iconContainer">
+                <div class="
+                    icon-cancel
+                    drawingObjectsListNode-icon 
+                    drawingObjectsListNode-icon_hidable
+                    drawingObjectsListNode-removeIcon">
+                </div>
+            </div>
+        </div>
+        {{/if}}
+    </div>
+</div>

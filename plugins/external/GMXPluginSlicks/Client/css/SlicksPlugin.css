@@ -1,0 +1,254 @@
+﻿body{
+	padding: 0;
+	margin: 0;
+}
+
+.container
+{
+	position: absolute; 		
+}
+
+.pointer
+{
+	cursor: pointer;			
+}
+
+.z_0{
+	z-index: -10;
+}
+
+.pie{				
+	behavior: url('PIE.htc');
+}
+
+.scroll_bufer{
+	position: absolute;		
+}
+
+.scroll_panel
+{
+	position: absolute;		/*overflow: hidden;	*/	
+}
+
+.panel
+{
+	position: absolute;		
+}
+
+.scroll_bar
+{
+	position: absolute;	
+	
+	cursor: move;	
+}
+
+.bar
+{
+	position: absolute;		
+	
+	text-align: center;
+}
+
+.bar_text{	
+	position: relative;	
+								      	       
+        	padding-top: 7px;
+        	
+			font-size: 12px;
+			font-family: sans-serif;
+			font-weight: bold;
+			text-align: center;
+			
+			color: white;                     	        	          	       					
+						
+			white-space: nowrap;	
+}
+
+.modalWindow_shadow
+{
+	position: absolute;
+	
+	z-index: 999;
+	
+	cursor: progress;
+	
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;		
+}
+
+.modalWindow_content
+{
+	position: absolute;
+	
+	cursor: auto;
+	
+	z-index: 1000;			
+}
+
+.myAwesomeElement {
+	position:absolute;	
+	
+    border: 1px solid #696;   
+    text-align: center; 
+    top: 155px;
+    left: 155px;
+    width: 200px;
+    height: 200px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    
+    background: #EEFF99;
+    
+    behavior: url('PIE.htc');
+}
+
+.text_area{
+	position: absolute;	
+					      	       
+        	padding-top: 7px;
+			font-size: 12px;
+			font-family: sans-serif;
+			font-weight: bold;
+			text-align: left;			
+			
+			color: white;                     	        	          	       													
+        	background-color: transparent;
+        	
+			outline: none;
+			      
+        	border: 0; 
+        	
+        	resize:none       	        			
+}
+
+.text_area_over{
+	position: absolute;	
+					      	       
+        	padding-top: 7px;
+			font-size: 12px;
+			font-family: sans-serif;
+			font-weight: bold;
+			text-align: left;			
+			
+			background-color: transparent;        
+        	color: #FF9B18; 
+        	     
+        	outline: none;
+        	     
+        	border: 0; 
+        	
+        	resize:none       	      			
+}
+
+.checkBoxText{
+	
+}
+
+.textConteiner{			   	
+			position: absolute;	
+								      	       
+        	padding-top: 7px;
+        	
+			font-size: 12px;
+			font-family: sans-serif;
+			font-weight: bold;
+			text-align: center;
+			
+			color: white;                     	        	          	       					
+						
+			white-space: nowrap;							     	       	       	  		        	        
+}
+
+.textConteinerWaitingAlert{			   	
+			position: absolute;	
+								      	       
+        	padding-top: 7px;
+        	
+			font-size: 12px;
+			font-family: sans-serif;
+			font-weight: bold;
+			text-align: center;
+			
+			color: red;                     	        	          	       					
+						
+			white-space: nowrap;							     	       	       	  		        	        
+}
+
+.textConteiner_no_enabled{	
+
+			cursor: auto;
+
+			position: absolute;
+					   	
+			padding-top: 7px;
+			font-size: 12px;
+			font-family: sans-serif;
+			font-weight: bold;
+			text-align: center;
+						
+        	color: #AAAAAA;
+        					
+			white-space: nowrap;							     	       	       	  		        	        
+}
+
+
+.textUnderLine{
+	text-decoration: underline;
+}
+
+.textConteiner_over{			   	
+			position: absolute;	
+				      	       
+        	padding-top: 7px;
+			font-size: 12px;
+			font-family: sans-serif;
+			font-weight: bold;
+			text-align: center;
+				
+			white-space: nowrap;
+        
+        	color: #FF9B18;        	        
+        					
+			white-space: nowrap;							     	       	       	  		        	        
+}
+
+.inputConteiner{
+	position: absolute;	
+					      	       
+        	padding-top: 7px;
+			font-size: 12px;
+			font-family: sans-serif;
+			font-weight: bold;
+			text-align: center;			
+			color: white;                     	        	          	       										
+			white-space: nowrap;        
+        	border: 0;
+        	outline: none;
+        	background-color: transparent;
+        			
+			white-space: nowrap;
+}
+
+.inputConteiner_over{
+	position: absolute;	
+					      	       
+        	padding-top: 7px;
+			font-size: 12px;
+			font-family: sans-serif;
+			font-weight: bold;
+			text-align: center;			        	        	        
+        	border: 0;
+        	outline: none;        	
+        	background-color: transparent;        
+        	color: #FF9B18;        	          	       										
+				
+			white-space: nowrap;
+}
+
+.relativeContainer
+{
+	position: relative;	
+}

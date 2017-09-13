@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GmxControls Leaflet Quick Start Guide Example</title>
+	<meta charset="utf-8" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@0.7.7/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@0.7.7/dist/leaflet.js"></script>
+-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin=""></script>
+
+    <link rel="stylesheet" href="../src/css/L.Control.gmxIcon.css" />
+    <link rel="stylesheet" href="../src/css/L.Control.gmxIconGroup.css" />
+
+	<script src="../src/js/L.Control.gmxIcon.js"></script>
+	<script src="../src/js/L.Control.gmxIconGroup.js"></script>
+
+    <style>
+        html, body, #map {
+            height: 100%;
+            width: 100%;
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+	<div id="map"></div>
+
+	<script>
+		var osm = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+			maxZoom: 18,
+			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'
+		});
+		var map = new L.Map('map', {layers: [osm], center: new L.LatLng(50, 20), attributionControl: false, zoomControl: false, zoom: 3});
+        
+        var prefix = 'http://maps.kosmosnimki.ru/GetImage.ashx?usr=khaibrik%40scanex.ru&img=',
+            onClick = function (ev) {
+                console.log('click', arguments);
+            },
+            statechange = function (ev) {
+                console.log('statechange', arguments, ev.target.options.isActive);
+            };
+
+        map.addControl(L.control.gmxIconGroup({
+            id: 'myGroupControl',
+            singleSelection: true,
+            isSortable: true,
+            items: [
+                L.control.gmxIcon({
+                    id: 'test1', title: 'Test icon', regularImageUrl: prefix + 'sled_walf.png'
+                    })
+                    .on('click', onClick)
+                    .on('statechange', statechange)
+                ,
+                L.control.gmxIcon({
+                    id: 'test2', title: 'Test icon2', regularImageUrl: prefix + 'logovo_walf.png'
+                    })
+                    .on('click', onClick)
+                    .on('statechange', statechange)
+            ]
+        }));
+	</script>
+</body>
+</html>

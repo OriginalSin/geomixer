@@ -1,0 +1,13 @@
+﻿.children {
+    margin-left: 25px;
+}
+
+.title {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.editType {
+    margin: 4px 2px;
+}

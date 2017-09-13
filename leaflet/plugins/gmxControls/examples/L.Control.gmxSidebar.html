@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GmxControls Leaflet Quick Start Guide Example</title>
+	<meta charset="utf-8" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@0.7.7/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@0.7.7/dist/leaflet.js"></script>
+-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin=""></script>
+
+    <link rel="stylesheet" href="../src/css/L.Control.gmxSidebar.css" />
+    <script src="../src/js/gmxPosition.js"></script>
+    <script src="../src/js/L.Control.gmxSidebar.js"></script>
+
+    <style>
+        html, body, #map {
+            height: 100%;
+            width: 100%;
+            margin: 0px;
+        }
+        #infoPanel {
+            position: absolute;
+			left: 0px;
+			right: 0px;
+			top: 21px;
+            text-align: center;
+			z-index: 1;
+        }
+        
+        #info {
+			background-color: #ffffff;
+			border-radius: 5px;
+            box-shadow: 0 1px 7px rgba(0,0,0,0.65);
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+	<div id="map"></div>
+    </div>
+
+	<script>
+		var osm = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+			maxZoom: 18,
+			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'
+		});
+		var map = new L.Map('map', {layers: [osm], center: new L.LatLng(50, 20), zoom: 6});
+
+        var c = window.c = L.control.gmxSidebar({width: 400, className: 'e'});
+        map.addControl(c);
+        c.getContentContainer().innerHTML = 'Lorem ipsum Culpa do fugiat deserunt sunt dolor aliquip eu irure dolor dolor dolor in dolore laborum sunt do mollit do culpa incididunt incididunt consequat in qui incididunt ea incididunt anim dolor Excepteur proident ullamco pariatur ullamco deserunt fugiat proident officia qui in nulla magna fugiat deserunt pariatur eiusmod id velit eiusmod sint Ut voluptate qui id sunt occaecat amet ullamco eiusmod proident velit in qui Ut minim do in laboris cillum aute labore mollit velit voluptate labore nostrud proident velit eu veniam sed proident dolor est sit incididunt ex est pariatur esse aute ut aliquip ea velit occaecat amet ut non cupidatat cillum Duis officia eu dolore dolor ad amet cillum incididunt pariatur eu cupidatat commodo et fugiat eu laboris qui id consectetur dolore ullamco incididunt in dolore non exercitation veniam amet labore ad anim eu magna consectetur ad culpa dolore tempor ea dolore consequat proident commodo incididunt ut sed aliqua deserunt id irure cillum minim tempor laborum anim qui in culpa est.';
+	</script>
+</body>
+</html>

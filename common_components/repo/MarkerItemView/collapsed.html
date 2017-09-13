@@ -1,0 +1,7 @@
+<% if (iconUrl) { %>
+    <div class="markerItemViewCollapsed-markerIconContainer">
+        <img class="markerItemViewCollapsed-markerIcon markerItemViewCollapsed-markerIcon" src="<%= iconUrl %>"/>
+    </div>
+<% } %>
+<div class="markerItemViewCollapsed-date"><%= nsGmx.Utils.formatDate(date, 'DD.MM.YYYY hh:mm') %></div>
+<div class="markerItemViewCollapsed-title"><%= title %></div>

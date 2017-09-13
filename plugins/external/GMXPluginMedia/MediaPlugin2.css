@@ -1,0 +1,325 @@
+﻿.desc-zagolovok
+{
+    font-family: Verdana;
+    font-weight: bold;
+    font-size: 9pt;
+    margin-top: 10px;    
+}
+
+.media-props {
+    margin: 8px 4px;
+    display: block;
+}
+
+.media-props input
+{
+    margin-right: 3px;
+}
+
+.media-props *
+{
+    vertical-align: middle;
+}
+
+.desc-dialog 
+{
+    box-shadow: 3px 3px 10px #333;
+	-moz-box-shadow: 3px 3px 10px #333;
+	-webkit-box-shadow: 3px 3px 10px #333;
+	padding: 5px 5px 5px 5px;
+	border-color: #FFFFFF;
+	overflow: hidden;
+}
+
+.desc-dialog  .ui-dialog-content
+{
+    min-width: 300px;
+}
+
+.desc-dialog  .ui-dialog-titlebar .ui-button
+{
+    margin-right: -18px;
+    margin-top: -24px;
+}
+
+.desc-dialog  .ui-dialog-titlebar
+{
+    height: 10px;
+    cursor:move;
+    position:relative;
+    color:#474747;
+    text-shadow:0 1px 0 rgba(255,255,255,.75);
+    border-bottom:1px solid #999;
+    padding:6px 10px;
+    -moz-border-radius:2px 2px 0 0;
+    -webkit-border-radius:2px 2px 0 0;
+    border-radius:2px 2px 0 0;
+    -moz-box-shadow:0 1px 0 #fff inset;
+    -webkit-box-shadow:0 1px 0 #fff inset;
+    box-shadow:0 1px 0 #fff inset;
+    background:#cfd1cf;
+    background-image:-webkit-gradient(linear,left top,left bottom,from(#f5f5f5),to(#cfd1cf));
+    background-image:-moz-linear-gradient(top,#f5f5f5,#cfd1cf);
+    background-image:-webkit-linear-gradient(top,#f5f5f5,#cfd1cf);
+    background-image:-o-linear-gradient(top,#f5f5f5,#cfd1cf);
+    background-image:-ms-linear-gradient(top,#f5f5f5,#cfd1cf);
+    background-image:linear-gradient(top,#f5f5f5,#cfd1cf);
+    filter:progid:DXImageTransform.Microsoft.gradient(gradientType=0,startColorstr='#f5f5f5',endColorstr='#cfd1cf')
+}	
+
+.desc-dialog  .ui-dialog-buttonset
+{
+    display:inline-block;*display:inline;*zoom:1;
+    padding:3px 0;
+    margin:0;
+    text-align:center;
+    color:#333;
+    vertical-align:middle;
+    cursor:pointer;
+    border:1px solid #b6b6b6;
+    border-bottom-color:#999;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    border-radius:3px;
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,.5),0 0 2px rgba(255,255,255,.15) inset,0 1px 0 rgba(255,255,255,.15) inset;
+    -webkit-box-shadow:0 1px 0 rgba(255,255,255,.5),0 0 2px rgba(255,255,255,.15) inset,0 1px 0 rgba(255,255,255,.15) inset;
+    box-shadow:0 1px 0 rgba(255,255,255,.5),0 0 2px rgba(255,255,255,.15) inset,0 1px 0 rgba(255,255,255,.15) inset;
+    background:#e4e4e4;
+    background-image:-webkit-gradient(linear,left top,left bottom,from(#fff),to(#e4e4e4));
+    background-image:-moz-linear-gradient(top,#fff,#e4e4e4);
+    background-image:-webkit-linear-gradient(top,#fff,#e4e4e4);
+    background-image:-o-linear-gradient(top,#fff,#e4e4e4);
+    background-image:-ms-linear-gradient(top,#fff,#e4e4e4);
+    background-image:linear-gradient(top,#fff,#e4e4e4);
+    filter:progid:DXImageTransform.Microsoft.gradient(gradientType=0,startColorstr='#ffffff',endColorstr='#e4e4e4')
+}
+
+
+#editMod
+{
+    right: 5em;
+	position: absolute;
+	top: 10%
+}
+
+.media-Desc-GUI
+{
+    display: inline-block;
+	margin-top: 5px;
+}
+
+#media-Desc-EditLabel
+{   
+    display: inline-block;
+    border-bottom: 1px dotted grey;
+	padding-bottom: 0.5px;
+	font-size:12px;
+}
+
+#mediaDesc-EditButton
+{   
+    display: inline-block;
+    margin-left: 45px;
+}
+
+.media-desc-img-load-title
+{
+    font-family: Verdana;
+    font-size: 9pt;
+    vertical-align: center;
+    margin: 0px;
+}
+
+#media-desc-fbload
+{
+    margin-left: 5px;
+    width: 30px; 
+	height: 30px;
+}
+
+#media-desc-savegmxImg
+{
+    width: 30px; 
+	height: 30px;
+}
+
+#media-desc-gmxImgLoadInput
+{
+    width: calc(100% - 74px);
+    height: 20px;
+	margin-left:0px;
+}
+
+/*
+Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md or http://ckeditor.com/license
+*/
+.mediaDesc-tempDiv
+{   
+    text-align: center;
+}
+
+.media-DescDialog .ui-dialog-content
+{   
+    background-color: #fff;
+}
+
+.media-descDiv div
+{  
+	font-family: sans-serif, Arial, Verdana, "Trebuchet MS";
+	color: #333;
+	font-size: 13px;
+	line-height: 1.6;
+}
+
+.media-descDiv
+{   
+    /* Font */
+	font-family: sans-serif, Arial, Verdana, "Trebuchet MS";
+	font-size: 13px;
+	/* Text color */
+	color: #333;
+	line-height: 1.6;
+    margin: 20px;
+	background-color: #fff;
+}
+
+.media-descDiv blockquote
+{
+	font-style: italic;
+	font-family: Georgia, Times, "Times New Roman", serif;
+	padding: 2px 0;
+	border-style: solid;
+	border-color: #ccc;
+	border-width: 0;
+	padding-left: 20px;
+	padding-right: 8px;
+	border-left-width: 5px;
+}
+
+.media-descDiv a
+{
+	color: #0782C1;
+	font-family: sans-serif, Arial, Verdana, "Trebuchet MS";
+	font-size: 12px;
+
+}
+
+.media-descDiv b
+{
+    font-size: 13px;
+	color:#333;
+}
+
+.media-descDiv  strong
+{
+    font-size: 13px;
+	color:#333;
+}
+
+.media-descDiv em
+{
+    font-size: 13px;
+	color:#333;
+}
+
+.media-descDiv ol
+{
+
+	/* IE7: reset rtl list margin. (#7334) */
+	*margin-right: 0px;
+	/* preserved spaces for list items with text direction other than the list. (#6249,#8049)*/
+	padding: 0 40px;
+	white-space: normal;
+}
+
+.media-descDiv ul
+{
+
+	/* IE7: reset rtl list margin. (#7334) */
+	*margin-right: 0px;
+	/* preserved spaces for list items with text direction other than the list. (#6249,#8049)*/
+	padding: 0 40px;
+	white-space: normal;
+	list-style-image: url('addit/krug.png');
+}
+
+.media-descDiv dl
+{
+
+	/* IE7: reset rtl list margin. (#7334) */
+	*margin-right: 0px;
+	/* preserved spaces for list items with text direction other than the list. (#6249,#8049)*/
+	padding: 0 40px;
+	white-space: normal;
+}
+
+.media-descDiv li
+{
+    font-family: sans-serif, Arial, Verdana, "Trebuchet MS";
+    font-size: 12px;
+	color: #333;
+	white-space: normal;
+}
+
+.media-descDiv h1
+{
+	font-weight: normal;
+	line-height: 1.2;
+}
+
+.media-descDiv h2
+{
+	font-weight: normal;
+	line-height: 1.2;
+}
+
+
+.media-descDiv hr
+{
+	border: 0px;
+	border-top: 1px solid #ccc;
+}
+
+.media-descDiv h3
+{
+	font-weight: normal;
+	line-height: 1.2;
+}
+
+.media-descDiv h4
+{
+	font-weight: normal;
+	line-height: 1.2;
+}
+
+.media-descDiv h5
+{
+	font-weight: normal;
+	line-height: 1.2;
+}
+
+.media-descDiv h6
+{
+	font-weight: normal;
+	line-height: 1.2;
+}
+
+.media-descDiv img
+{
+	cursor: pointer;
+}
+
+.imgMedia:hover
+{
+    cursor: pointer;
+}
+
+.media-inlineDescr.media-descDiv {
+    width: 400px;
+    max-height: 300px;
+    overflow: auto;
+    white-space: normal;
+    margin: 0px;
+	font-weight:normal;
+}

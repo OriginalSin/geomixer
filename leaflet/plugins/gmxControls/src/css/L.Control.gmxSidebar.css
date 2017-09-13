@@ -1,0 +1,14 @@
+.leaflet-gmx-sidebar {
+    border: 1px solid rgba(0,0,0,0.25);
+    background: #efefef;
+    padding: 5px;
+}
+
+.leaflet-gmx-sidebar_expanded {
+    position: absolute;
+    height: auto;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}

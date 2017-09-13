@@ -1,0 +1,21 @@
+.ntReliefColor {
+    float: left;
+    width: 30px;
+    height: 20px;
+}
+
+.ntReliefLabel {
+    float: left;
+    width: 30px;
+    height: 20px;
+    text-align: left;
+    font-size: 10px;
+	font-family: Verdana;
+	padding-top: 4px;
+}
+
+#ntReliefDescription {
+    text-align: center;
+    padding-bottom: 5px;
+	font-family: Verdana;
+}

@@ -1,0 +1,12 @@
+{
+  "name": "gmxcc-jsdocs",
+  "version": "1.0.0",
+  "scripts": {
+    "doc": "jsdoc ./.. -r -c config.json -d out"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jsdoc": "^3.4.0"
+  }
+}

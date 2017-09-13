@@ -1,0 +1,165 @@
+.security-header-table {
+    width: 100%;
+    height: 22px;
+    margin-bottom: 7px;
+}
+
+.security-owner {
+    line-height: 22px;
+    height: 22px;
+}
+
+.security-header {
+    margin: 2px 0px 5px 0px;
+}
+
+.security-header * {
+    font-size: 12px;
+}
+
+.security-save {
+    float: right;
+    padding: 0px 5px;
+}
+
+.security-access-header > * {
+    vertical-align: middle;
+}
+
+.security-canvas {
+    overflow: hidden;
+}
+
+.access-table-placeholder table {
+    table-layout: fixed;
+}
+.security-access-label {
+    padding-right: 5px;
+}
+
+.security-policy-control {
+    margin-top: 5px;
+}
+
+.policy-checkbox {
+    margin-right: 5px;
+}
+
+.security-policy-label {
+    padding-right: 15px;
+}
+
+.security-add-icon {
+    width: 24px;
+    height: 24px;
+    background: url(../img/add_user.png);
+    cursor: pointer;
+    display: inline-block;
+}
+
+.security-group-icon {
+    width: 16px;
+    height: 16px;
+    background: url(../img/usergroup.png);
+    cursor: pointer;
+    display: inline-block;
+}
+
+.security-user-icon {
+    width: 16px;
+    height: 16px;
+    /* background: url(../img/user.png); */
+    cursor: pointer;
+    display: inline-block;
+}
+
+.security-add-container {
+    font-size: 12px;
+    margin-bottom: 5px;
+    position: relative;
+    z-index: 0;
+}
+
+.security-add-container > button, .security-owner-container > button {
+    margin-left: 10px;
+    padding: 0px 5px;
+}
+
+.security-canvas .ui-autocomplete {
+    border: 1px solid #AAA;
+    padding: 0px;
+}
+
+.security-owner-container {
+    display: inline-block;
+}
+
+.security-owner-cell {
+    width: 100%;
+    padding-left: 5px;
+}
+
+.security-add-input {
+    width: 170px;
+}
+
+.security-owner-placeholder {
+    margin-bottom: 6px;
+}
+
+.security-userlist-placeholder {
+    margin-top: 5px;
+}
+
+.security-row-nickname, .security-row-fullname {
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 1px 0px 1px 3px;
+}
+
+.security-row-nickname > * {
+    vertical-align: middle;
+}
+
+.security-row-nickname  > .security-group-icon, .security-row-nickname > .security-user-icon{
+    margin-right: 3px;
+}
+
+.security-row-access {
+    width: 130px;
+}
+
+.security-row-remove-cell {
+    text-align: center;
+}
+
+.security-autocomplete-item  {
+    white-space: nowrap;
+}
+
+.security-autocomplete-item  > *{
+    vertical-align: middle;
+}
+
+.security-autocomplete-item  > .security-group-icon, .security-autocomplete-item  > .security-user-icon{
+    margin-right: 3px;
+}
+
+.security-count-table td {
+    padding-right: 5px;
+}
+.security-counter {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.security-custom-ui {
+    max-height: 130px;
+    overflow: auto;
+    padding-left: 5px;
+}
+
+.security-dialog {
+    overflow: hidden;
+}

@@ -1,0 +1,96 @@
+.slider-caption{
+	font-size: 12px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.slider-container
+{
+    margin-top: 20px;
+    padding: 2px 25px 12px 5px !important;
+}
+
+.slider-container .ui-slider {
+  background-color: #EFEFEF;
+  height: 3px;
+  border: none;
+  position: relative;
+  font-size: 0px;
+}
+
+.slider-container .ui-slider .ui-slider-selectable-region {
+  cursor: pointer;
+  position: absolute;
+  font-size: 0px;
+  top: 0px;
+  height: 3px;
+  z-index: 5;
+}
+
+.slider-container .ui-slider .ui-slider-tick {
+  border-left-style: solid;
+  border-left-color: #252525;
+  position: absolute;
+  border-left-width: 1px;
+  font-size: 0px;
+  top: -2px;
+  height: 5px;
+  width: 2px;
+  z-index: 5;
+}
+
+.slider-container .ui-slider .ui-slider-tick-text {
+  font-size: 7pt;
+  position: absolute;
+  top: -1.5em;
+  margin-left: -0.25em;
+  width: auto;
+  cursor: default;
+}
+
+.slider-container .ui-slider .cloud-image {
+  position: absolute;
+  margin-top: -6px;
+  margin-left: -8px !important;
+  height: 30px;
+}
+
+.slider-container .ui-slider-range {
+  background-color: #F90;
+  height: 3px;
+  position: relative;
+  z-index: 4;
+}
+
+.slider-container .ui-slider-handle {
+  background-color: Transparent;
+  background-image: url('img/slider-r-n-b.png');
+  background-repeat: no-repeat;
+  background-position: top left;
+  cursor: pointer;
+  width: 13px !important;
+  height: 13px !important;
+  top: auto;
+  margin: 0;
+  border: none;
+  position: absolute;
+  outline: none;
+  z-index: 10;
+}
+
+.slider-container .ui-slider-handle-left {
+  background-color: Transparent;
+  background-image: url('img/slider-l-n-b.png');
+  background-repeat: no-repeat;
+  background-position: top left;
+  cursor: pointer;
+  width: 13px !important;
+  height: 13px;
+  border: none;
+  margin-left: -12px;
+  position: absolute;
+  outline: none;
+}
+.slider-container .ui-slider .cloud-image img {
+  cursor: pointer;
+}

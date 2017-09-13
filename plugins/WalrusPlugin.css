@@ -1,0 +1,113 @@
+﻿.walrus-switchcontainer
+{
+    margin-top: 5px;
+}
+
+.walrus-label
+{
+    margin: 0px 10px 0px 1px;
+    font-size: 12px;
+}
+
+.walrus-main-container
+{
+    padding-right: 16px;
+}
+
+.walrus-images-row, .walrus-row
+{
+    cursor: pointer;
+    text-align: center;
+}
+
+.walrus-list-elem
+{
+    font-size: 11px;
+}
+
+.walrus-row > td
+{
+    padding: 0px 2px
+}
+
+.walrus-images-row:hover, .walrus-row:hover
+{
+    background-color: #EEEEEE;
+}
+
+.walrus-active-image
+{
+    background-color: #99FFFF;
+}
+
+.walrus-active-image:hover
+{
+    background-color: #77FFFF;
+}
+
+.walrus-button
+{
+    margin: 3px;
+    padding: 3px;
+    border-radius: 3px;
+    font-size: 11px;
+}
+
+.walrus-filter-button
+{
+    background-color: #EEEEFF;
+    float: left;
+    margin: 3px;
+    padding: 3px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 11px;
+}
+
+.walrus-filter-on
+{
+    background-color: #CCCCFF;
+}
+
+.walrus-edit-icon
+{
+    width: 12px;
+    margin: 0px 4px;
+}
+
+.walrus-search-button
+{
+    float: right;
+}
+
+.walrus-relative-row
+{
+    cursor: pointer;
+    text-align: center;
+}
+
+.walrus-relative-active-row
+{
+    background-color: #77FFFF;
+}
+
+.walrus-relative-title
+{
+    width: 100%;
+    text-align: center;
+    font-size: 13;
+    font-weight: bold;
+    margin-top: 6px;
+}
+
+.walrus-images-container
+{
+    margin-bottom: 10px;
+}
+
+.walrus-feedback-input
+{
+    width: 98%;
+    margin-top: 3px;
+    margin-bottom: 10px;
+}

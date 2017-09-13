@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GmxControls Leaflet Quick Start Guide Example</title>
+	<meta charset="utf-8" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@0.7.7/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@0.7.7/dist/leaflet.js"></script>
+-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin=""></script>
+
+    <script src="../src/js/gmxPosition.js"></script>
+
+    <style>
+        html, body, #map {
+            height: 100%;
+            width: 100%;
+            margin: 0px;
+        }
+        #infoPanel {
+            position: absolute;
+			left: 0px;
+			right: 0px;
+			top: 21px;
+            text-align: center;
+			z-index: 1;
+        }
+        
+        #info {
+			background-color: #ffffff;
+			border-radius: 5px;
+            box-shadow: 0 1px 7px rgba(0,0,0,0.65);
+            padding: 10px;
+        }
+
+        .demoControl {
+            font-size: 14px;
+            color: rgba(0,0,0,0.75);
+        }
+
+        .leaflet-left.leaflet-right .demoControl {
+            width: calc(100% - 20px);
+            height: 20px;
+        }
+
+        .leaflet-top.leaflet-bottom .demoControl {
+            height: calc(100% - 20px);
+            width: 20px;
+        }
+
+        .leaflet-bottom.leaflet-left.leaflet-right {
+            text-align: left;
+        }
+
+        .leaflet-top.leaflet-left.leaflet-right {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+	<div id="map"></div>
+
+	<script>
+        var demoControl = L.Control.extend({
+            onAdd: function() {
+                var e = document.createElement('div');
+                e.className = 'demoControl';
+                e.style.backgroundColor = this.options.backgroundColor;
+                this.options.text && (e.innerHTML = this.options.text);
+                return e;
+            }
+        })
+
+		var osm = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+			maxZoom: 18,
+			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'
+		});
+		var map = new L.Map('map', {layers: [osm], center: new L.LatLng(50, 20), zoom: 6, attributionControl: false, zoomControl: false});
+
+        map.addControl(new demoControl({
+            backgroundColor: 'rgba(255,0,0,0.5)',
+            position: 'top',
+            text: 'Lorem ipsum Laborum consectetur ad pariatur voluptate in sint aliquip enim aute dolor irure ea eu culpa quis aliquip sint anim quis.'
+        }));
+
+        map.addControl(new demoControl({
+            backgroundColor: 'rgba(255,0,0,0.5)',
+            position: 'bottom',
+            text: 'Lorem ipsum Dolore id consequat amet in tempor laborum elit ad qui dolore cillum ex Excepteur esse cillum Ut.'
+        }));
+
+        map.addControl(new demoControl({
+            backgroundColor: 'rgba(255,127,0,0.5)',
+            position: 'left',
+        }));
+
+        map.addControl(new demoControl({
+            backgroundColor: 'rgba(255,127,0,0.5)',
+            position: 'right'
+        }));
+	</script>
+</body>
+</html>

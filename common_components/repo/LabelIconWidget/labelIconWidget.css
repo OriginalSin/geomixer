@@ -1,0 +1,14 @@
+.labelIconWidget { position: relative; display: inline-block; }
+.labelIconWidget_clickable { cursor: pointer; }
+.labelIconWidget-icon { }
+.labelIconWidget-label {
+    font-size: 8px;
+    position: absolute;
+    top: -6px;
+    right: 0;
+    background-color: hsl(0, 85%, 50%);
+    border-radius: 10px;
+    padding: 2px 5px;
+    color: white;
+    font-weight: bold;
+}

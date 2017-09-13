@@ -1,0 +1,1950 @@
+*
+{
+	font-family: tahoma;
+	font-size: 12px;
+	padding: 0;
+	margin: 0;
+    outline: none;
+}
+
+*:focus {
+    outline: none;
+}
+
+body
+{
+	color: inherit;
+	overflow:hidden;
+	border:none;
+}
+table
+{
+	border-collapse: collapse;
+}
+select
+{
+	background-color: #FAFAFE;
+	height: 20px;
+}
+option
+{
+	padding: 1px 0px 1px 3px;
+}
+.userCanvas
+{
+	z-index: -1;
+	left: 0px;
+	top: 30px;
+	position: absolute;
+}
+.colorSelector
+{
+	height: 18px;
+	margin: 2px;
+	position: relative;
+	width: 30px;
+	border: 1px solid #000000;
+}
+.colorIcon
+{
+	height: 13px;
+	margin: 0px 3px 0px 4px;
+	position: relative;
+	width: 9px;
+	border: none;
+	cursor: pointer;
+	font-size: 0px;
+}
+.borderIcon
+{
+	height: 11px;
+	position: absolute;
+	width: 7px;
+	border-style: solid;
+	border-width: 1px;
+	cursor: pointer;
+	font-size: 0px;
+	top: 0px;
+	left: 0px;
+}
+.fillIcon
+{
+	height: 11px;
+	margin: 0px;
+	border: none;
+	position: absolute;
+	width: 7px;
+	font-size: 0px;
+	top: 1px;
+	left: 1px;
+}
+.inputStyle
+{
+	border: 1px solid #AFC0D5;
+	background-color: #FFFFFF;
+	height: 14px;
+	padding: 2px;
+	margin: 1px 3px;
+}
+
+.inputStyle.inputShortWidth
+{
+	width: 35px;
+}
+
+.inputStyle.inputFullWidth {
+    width: 100%;
+    box-sizing: border-box;
+    height: 20px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.inputStyle:disabled
+{
+    color: #545454;
+    background-color: #EBEBE4;
+}
+
+.minInputStyle {
+	border: none;
+	border-bottom: 1px solid #808080;
+	background-color: #FFFFFF;
+	height: 14px;
+	padding: 2px 0px;
+	margin: 1px 0px;
+}
+
+.selectStyle
+{
+	border: 1px solid #AFC0D5;
+	background-color: #FFFFFF;
+	height: 20px;
+	margin: 1px 3px;
+}
+.headerLinks
+{
+	text-align: left;
+	position: relative;
+	height: 30px;
+	background-color: transparent;
+}
+.headerLinks a
+{
+	text-decoration: none;
+	color: #293D6B;
+	margin: 4px 10px 0px 5px;
+	font-size: 11px;
+	float: right;
+}
+.headerLinks a img
+{
+	border: none;
+	margin: 0px 3px -3px 0px;
+}
+.headerLinks a:hover
+{
+	text-decoration: underline;
+}
+div.active
+{
+    background-color: #E0E0E0;
+    padding: 2px 0px;
+}
+div.log
+{
+	/*position: absolute;
+	width: 40px;
+	top: 8px;
+	right: 10px;
+	text-align: right;*/
+    float: right;
+    /*margin: 8px 10px 0px 0px;*/
+}
+div.log span
+{
+	font-family: tahoma;
+	font-size: 13px;
+}
+div.user
+{
+	float: right;
+	/*text-align: right;
+	position: absolute;
+	width: 300px;
+	top: 8px;
+	right: 50px;*/
+	white-space: nowrap;
+	overflow: hidden;
+    /*margin: 8px 4px 0px 0px;*/
+}
+div.user span
+{
+	color: #fc830b;
+	font-family: tahoma;
+	font-size: 13px;
+	font-weight: bold;
+}
+.leftIconPanel
+{
+	height: 35px;
+	padding-top: 1px;
+	background: url(../img/grad.png) repeat-x scroll 0px -125px;
+}
+.iconPanel
+{
+	height: 35px;
+	padding-top: 1px;
+	background: url(../img/grad.png) repeat-x scroll 0px -125px;
+/*	border-left: 1px solid #EDF4F6;/*#216b9c #6eb8ce*/
+}
+.logo
+{
+	background: transparent url(../img/geomixer_transpar.png) center no-repeat;
+	height: 60px;
+	width: 360px;
+}
+
+.emptyLogo
+{
+	height: 60px;
+	width: 360px;
+}
+
+#leftCollapser {
+    position: absolute;
+    width: 12px;
+    bottom: 0px;
+    top: 70px;
+    cursor: pointer;
+}
+
+#leftCollapser:hover {
+    background-color: #EFEFEF;
+}
+
+.leftCollapser-icon {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    width: 6px;
+    height: 11px;
+    margin-left: 2px;
+}
+
+.leftCollapser-left {
+    background: url(../img/collapse-arrow-left.gif)
+}
+
+.leftCollapser-right {
+    background: url(../img/collapse-arrow-right.gif)
+}
+
+.flashMap
+{
+	position: relative;
+    z-index: 0;
+}
+.tooltip
+{
+	position: absolute;
+	border: 1px solid #5195BE;
+	background-color: #FAFAFF;
+	color: #5185AE;
+	padding: 2px;
+	z-index: 10000;
+	left: 0px;
+	top: 0px;
+	visibility: hidden;
+}
+.leftMenu
+{
+	position: absolute;
+	left: 0px;
+	top: 70px;
+	width: 360px;
+	overflow: hidden;
+}
+
+.leftPanelHeader
+{
+    position: absolute;
+	left: 0px;
+	top: 0px;
+    width: 100%;
+}
+
+.leftPanelFooter
+{
+    position: absolute;
+	left: 0px;
+	bottom: 0px;
+    width: 100%;
+}
+
+.leftContent
+{
+	width: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+    position: absolute;
+}
+.layerManager
+{
+	position: absolute;
+	left: 360px;
+	top: 30px;
+	width: 300px;
+	overflow: hidden;
+}
+div.error,
+input.error,
+textarea.error
+{
+	background-color: #FFABAB;
+}
+
+.left_wfs
+{
+	margin: 0px;
+	background-color: #FAFAFE;
+}
+.left_wms
+{
+	margin: 0px;
+	background-color: #FAFAFE;
+}
+
+.left_pictureBinding
+{
+	margin: 0px;
+	background-color: #edf4f6;
+}
+
+.left_gps
+{
+	margin: 0px;
+	background-color: #edf4f6;
+}
+.left_layerManager
+{
+	margin: 0px;
+	background-color: #edf4f6;
+}
+.left_objects
+{
+	margin: 0px;
+	background-color: #edf4f6;
+}
+.left_shp
+{
+	margin: 0px;
+	background-color: #edf4f6;
+}
+.left_help
+{
+	margin: 0px;
+	background-color: #edf4f6;
+}
+.left_search
+{
+	margin: 0px;
+	background-color: #edf4f6;
+}
+.left_usage
+{
+	margin: 0px;
+	background-color: #edf4f6;
+}
+.left_serviceHelp
+{
+	margin: 0px;
+	background-color: #edf4f6;
+}
+.left_mapTabs
+{
+	margin: 0px;
+	background-color: #edf4f6;
+}
+
+/* loadServerData */
+.serverDataCanvas
+{
+    width: 315px;
+    margin-left: 16px;
+}
+.serverDataInput
+{
+	width: 100%;
+	padding: 5px 5px 5px 5px;
+}
+.serverDataCanvas .urlHeader
+{
+	font-size: 12px;
+	margin: 1px 3px;
+}
+.serverDataCanvas .layerfeature
+{
+	margin: 3px;
+}
+
+/* binding */
+.workArea
+{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background-color: #FAFAFE;
+	position: relative;
+}
+
+.imgBoundingPoint
+{
+	width: 21px;
+	height: 27px;
+	z-index: 1;
+	position: absolute;
+	cursor: pointer;
+}
+.imgHelperPoint
+{
+	width: 21px;
+	height: 18px;
+	margin: 5px;
+	cursor: pointer;
+}
+
+/* mapLayers */
+.layer
+{
+	padding: 0px 2px 0px 4px;
+	cursor: pointer;
+	position: relative;
+}
+.groupLayer
+{
+	margin: 0px 0px 0px 0px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+/* cпециальные отступы для мультистилей */
+div[multistyle] {
+    padding-left: 11px;
+}
+
+.treeview [multistyle]  li li{
+    padding-left: 0px;
+}
+
+.dragableDummy
+{
+	padding: 2px 2px 2px 20px;
+	background: #DDDDDD;
+	font-family: monospace;
+	color: #123456;
+	border-right: 2px solid #AAAAAA;
+	border-bottom: 2px solid #AAAAAA;
+	z-index:100000;
+	-webkit-user-select:none;
+	cursor: move;
+}
+.droppableHover span
+{
+	text-decoration: underline;
+}
+li.nodeJustChanged
+{
+	background-color: #EAF0FA;
+}
+div.swap
+{
+	height: 5px;
+}
+div.swap-droppableHover
+{
+	height: 5px;
+	background: url(../img/swap.gif) no-repeat;
+}
+
+/* gps */
+div.unit
+{
+	width: 345px;
+	padding: 5px;
+	cursor: pointer;
+	width: 345px;
+}
+div.unit.selectedUnit
+{
+	background-color: #AACEF5;
+}
+.hoverUnit
+{
+	background-color: #BAD1FF;
+}
+div.unit .unitName
+{
+	font-size: 20px;
+	margin-left: 5px;
+	font-weight: bold;
+	color: #3557A9;
+}
+div.unit .unitInfo
+{
+	margin-left: 5px;
+	font-size: 12px;
+}
+
+/* layer manager */
+.layersSearchCanvas span
+{
+	margin: 0px 5px;
+}
+.layerDescription
+{
+	margin: 0px 5px;
+	color: #7D7D8D;
+}
+
+.layerInfoButton
+{
+    font-weight: bold;
+    font-style: italic;
+    margin: 0px 5px;
+    cursor: pointer;
+}
+
+.filterCanvas
+{
+	padding: 4px 0px;
+	border-bottom: 1px solid #DCDCDC;
+}
+.box
+{
+	float: left;
+}
+.icon
+{
+	float: left;
+	margin: 0px 1px -3px 1px;
+	cursor: pointer;
+}
+
+/* help */
+.help
+{
+	padding: 5px 15px;
+}
+.help p,
+.help span,
+.help a
+{
+	margin: 3px 0px;
+	font-size: 12px;
+}
+.help div.helpHeader
+{
+	font-size: 14px;
+	margin: 7px 0px 2px 0px;
+	color: #153069;
+}
+.childsCanvas
+{
+	padding-right: 10px;
+}
+
+.styleTitle
+{
+	width: 70px;
+}
+
+.block
+{
+	width: 270px;
+	height: 25px;
+	top: 0px;
+	left: 0px;
+	position: absolute;
+	background: #ABABAB;
+}
+
+.layerProperties
+{
+	width: 320px;
+}
+
+.propertiesTable td
+{
+	height: 22px;
+	border: 1px solid #DEDEDE;
+
+}
+
+.propertiesTable-checkbox
+{
+    margin-left: 4px;
+}
+
+.propertiesTable-title
+{
+    padding-left: 5px;
+    font-size: 12px;
+}
+
+.layerProperties td
+{
+	height: 18px;
+	border: 1px solid #DEDEDE;
+}
+
+.fileCanvas td
+{
+	padding: 1px 2px;
+}
+.fileCanvas tbody td
+{
+	border-top: 1px solid #D0D8DF;
+	border-bottom: 1px solid #D0D8DF;
+}
+.fileCanvas .currentDir
+{
+	padding: 3px 0px 3px 5px;
+}
+.fileCanvas tr.hover td
+{
+	background-color: #DEDEDE;
+}
+.fileCanvas thead td
+{
+	background: url(../img/gradHeader.png) repeat-x scroll 0 -30px transparent;
+}
+
+.fileCanvas-folder-icon
+{
+	background: url(../img/folder.png);
+    margin: 2px 3px -3px 0px;
+    width: 13px;
+    height: 13px;
+    float: left;
+}
+
+.fileBrowser-pathWidget
+{
+    margin: 2px 0px
+}
+
+.fileBrowser-pathElem
+{
+    cursor: pointer;
+}
+
+.fileBrowser-activePathElem
+{
+    background-color: #b7e7eb;
+}
+
+.fileBrowser-progress
+{
+    background: url(../img/progress.gif);
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0px 0px 3px 3px;
+}
+
+.fileBrowser-dragFileMessage
+{
+    position: absolute;
+    right: 0px;
+    color: #DDDDDD;
+    margin: 9px 62px 0px 0px;
+    font-size: 30px;
+}
+
+div.fileBrowser-progressBar
+{
+    width: 400px;
+    margin: 16px 18px 0px 0px;
+    position: absolute;
+    right: 0px;
+    z-index: 1;
+    height: 30px;
+}
+
+div.fileBrowser-progressBar > .ui-progressbar-value {
+    background: #DDD;
+}
+
+.vectorInfoParams
+{
+	width: 100%;
+}
+
+.vectorInfoParams td
+{
+	padding: 1px 2px;
+	border: 1px solid #CDCDCD;
+}
+
+.floatLeft
+{
+	float: left;
+}
+.floatRight
+{
+	float: right;
+}
+
+.contextMenu
+{
+	position:absolute;
+	z-index: 1000000;
+	background-color: #FFFFFF;
+	/* padding: 0px 10px; */
+	border: 1px solid #DDDDDD;
+	/*width: 120px;*/
+}
+
+.contextMenuItem
+{
+	padding: 3px 10px;
+	white-space:nowrap;
+    cursor: pointer;
+}
+
+.contextMenuItem:hover
+{
+	background-color: #e5e5e5;
+}
+
+.contextMenuSeparator
+{
+	border-bottom: 1px solid #999999
+}
+
+.invisible,
+.invisible span,
+.invisible div,
+tr td.invisible
+{
+	color: #999999;
+}
+
+.mapAccessSuggest
+{
+	position: absolute;
+	width: 300px;
+	height: 200px;
+	border: 1px solid #999999;
+	background: #FFF;
+	top: 23px;
+	left: 0px;
+	padding: 2px;
+}
+
+.skype_pnh_print_container
+{
+	display:inline !important;
+}
+
+skype_pnh_container
+{
+	display: none !important;
+}
+
+.attrsTableBody #attrsTableParent td
+{
+	padding: 1px 5px 2px 5px;
+	border: 1px solid #dedede;
+	font-size: 12px;
+	font-weight: normal;
+}
+.attrsTableBody #attrsTableParent th
+{
+	/* background:url(../img/gradHeader.png) repeat-x scroll 0 -30px transparent;*/
+	height:20px;
+	text-align:center;
+	padding: 1px 5px 2px 5px;
+	border: 1px solid #dedede;
+	font-size: 12px;
+	font-weight: normal;
+}
+
+.attrsTableBody #attrsTableParent .odd td
+{
+	background-color: #eaeaea;
+}
+
+.ui-autocomplete-category {
+	font-weight: bold;
+	padding: .2em .4em;
+	margin: .8em 0 .2em;
+	line-height: 1.5;
+}
+
+.customAttributes {
+    margin-top: 5px;
+}
+
+.customAttributes td {
+	border-width: 0px;
+	background-color: 0xffffff;
+}
+
+.customAttr-typesselect {
+    width: 83px;
+}
+
+.customAttributes .moveIcon {
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.customAttributes .removeIcon {
+    margin-left: 4px;
+}
+
+.VectorLayerEncoding td
+{
+	border: none;
+	padding-left: 1px
+}
+
+.VectorLayerEncoding label
+{
+	padding-left: 3px
+}
+
+.VectorLayerEncoding .VectorLayerEncodingInput
+{
+	margin-left: 3px;
+	width: 150px
+}
+
+.CustomErrorText
+{
+	text-align: center;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+.CommonErrorText {
+    overflow: hidden;
+    height: 100%;
+}
+
+.CommonErrorTable {
+    color: red;
+    height: 100%;
+    width: 100%;
+}
+
+.StacktraceErrorText {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    border: none
+}
+
+.StacktraceContainer {
+    height: 100%;
+}
+
+.TemporalLayer
+{
+	margin-top: 8px;
+    margin-left: 3px;
+}
+
+.TemporalLayer table
+{
+    clear: both;
+}
+
+.TemporalLayer td
+{
+	border: none;
+	padding: 3px 0px 0px 0px;
+}
+
+.TemporalLayer label
+{
+	padding-right: 3px;
+}
+
+.TemporalLayer select
+{
+	width: 100px;
+}
+
+.TemporalLayer .ErrorPeriod
+{
+	background-color: #FFABAB;
+}
+
+.temporal-properties-single
+{
+    float: right;
+    margin-right: 41px;
+}
+
+.temporal-control-noattr
+{
+    font-weight: bold;
+    color: red;
+}
+
+.temporal-properties-single *
+{
+    vertical-align: middle;
+}
+
+.temporal-type
+{
+    float: right;
+    margin-right: 3px;
+}
+
+.temporal-type > *
+{
+    vertical-align: middle;
+}
+
+.temporal-maxshow
+{
+    width: 50px;
+}
+
+.layersSearchCanvas .PeriodCalendar
+{
+	margin: 0px;
+}
+
+.layersSearchCanvas #calendar
+{
+	margin: 0px;
+}
+
+.layersSearchCanvas .intersection > td
+{
+	padding-top: 10px;
+}
+
+.layersScroll .ui-widget-content
+{
+	background: #C7C7C7;
+	margin: 7px;
+}
+
+div.layersScroll
+{
+    width: 315px;
+    padding: 5px 0px;
+}
+
+.layersScroll > label > input
+{
+    vertical-align: middle;
+    margin-right: 4px;
+}
+
+.layersScroll table, .layersScroll td#scrollTD
+{
+	width: 100%;
+}
+.layersScroll img
+{
+	margin-top: 4px;
+}
+
+.tableBody .listLayerTable td
+{
+	border:none;
+}
+
+.fillColorOpacity
+{
+    margin-left: 9px;
+}
+
+.fillStyleControls #patternStyleSelector
+{
+	width: 100%;
+}
+
+.fillStyleControls .widthInput
+{
+	margin-right: 15px;
+}
+
+.fillStyleControls .opacityIcon
+{
+    margin: 4px;
+}
+
+.fillStyleControls .widthStepTable input
+{
+	width: 30px;
+}
+
+.fillStyleControls .widthStepTable td
+{
+	text-align: center;
+}
+
+.fillStyleControls .widthStepTable img
+{
+	margin: 1px;
+}
+
+.fillStyleControls .selectorDiv
+{
+	white-space: nowrap;
+}
+
+.fillStyleControls #patternOpacitySlider
+{
+	margin: 5px 0px;
+}
+
+.fillStyleControls .patternColorPicker
+{
+	width: 100%;
+	padding-right: 5px;
+}
+
+.fillStyleControls .patternColorDelete
+{
+	text-align: center;
+}
+
+
+.fillStyleControls .patternColorPicker > div
+{
+	height: 10px;
+}
+
+.fillStyleControls table.patternColorControl
+{
+	width: 100%
+}
+
+.fillStyleControls .widthStepTable *
+{
+	vertical-align: middle;
+}
+
+/*.fillStyleControls td.selectorDivContainer
+{
+	vertical-align: top;
+}*/
+
+.fillStyleSelectorDiv img
+{
+	border: solid 2px white;
+	cursor: pointer;
+}
+
+.fillStyleSelectorDiv img.selectedType
+{
+	border: solid 2px red;
+}
+
+#patternStyleSelector img
+{
+    width: 16px;
+    height: 16px;
+    border: 2px solid #cccccc;
+    margin: 1px;
+    cursor: pointer;
+}
+
+#patternStyleSelector img.activePatternType
+{
+    border: 2px solid red;
+}
+
+.EmailErrorMessage
+{
+    background-color: #ffcccc
+}
+
+.uiw-inactive
+{
+    color: #bbbbbb;
+}
+
+.clusterStyleControl {
+    border-color: #bbbbbb;
+    border-style: solid;
+    border-width: 1px;
+    padding-left: 6px;
+    margin-left: -6px;
+}
+
+.clusterViewContainer td
+{
+    margin: 1px;
+}
+
+.clusterViewContainer input
+{
+    width: 30px;
+}
+
+/*.attrTableBody #attrTable2TableParent th, .attrTableBody #attrTable2TableParent td
+{
+    border: 1px solid #DEDEDE;
+    padding: 1px 5px 2px;
+}*/
+
+.layertags-type
+{
+    width: 80px;
+}
+
+.layertags-container
+{
+    overflow: auto;
+    margin-top: 5px;
+}
+
+.layertags-table input
+{
+    margin: 1px;
+}
+
+.layertags-table td
+{
+    border: 0px;
+}
+
+.layertags-delete
+{
+    padding-left: 2px;
+}
+
+.layertags-collapsable td
+{
+    border: none;
+    width: 250px;
+}
+
+#layerSource .ui-tabs-nav li
+{
+    width: 31%;
+    text-align: center;
+}
+
+#layerSource .ui-tabs-nav a
+{
+    width: 88%;
+}
+
+#layerSource .ui-widget-header
+{
+    background: none;
+    border: 0px;
+}
+
+#layerSource .ui-tabs-selected
+{
+    background: #DCE3E5
+}
+
+#layertagstable
+{
+    z-index: 10001;
+    position: relative;
+}
+
+#layertagstable .ui-autocomplete
+{
+    background-color: #eeeeff;
+    border: 1px solid #AFC0D5;
+}
+
+.ui_tpicker_minute .ui-slider, .ui_tpicker_hour .ui-slider, .ui_tpicker_second .ui-slider
+{
+    background-color: #6EB8CE;
+}
+
+#ui-datepicker-div .ui-state-active
+{
+    background-color: #FFCCCC;
+}
+
+.collabsible-icon
+{
+    width: 9px;
+    height: 9px;
+    float: left;
+    margin: 2px 5px;
+    cursor: pointer;
+}
+
+.collabsible-icon-hidden
+{
+    background: url(img/expand.gif);
+}
+
+.collabsible-icon-shown
+{
+    background: url(img/collapse.gif);
+}
+
+.collabsible-title
+{
+    margin: 5px 0px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.RCCreate-params td
+{
+    border: none;
+}
+
+.RCCreate-params
+{
+    margin: 10px 0px 0px 3px;
+    clear: both;
+}
+
+.RCCreate-zoom-input
+{
+    width: 30px;
+}
+
+.RCCreate-tagContainer
+{
+    margin-top: 10px;
+}
+
+.RCCreate-checkbox
+{
+    margin-left: 3px;
+}
+
+.RCCreate-advanced-link
+{
+    /*float: right;
+    margin-right: 3px;*/
+    margin-left: 3px;
+}
+
+.RCCreate-header
+{
+    margin-top: 9px;
+}
+
+#RCCreate-container > td
+{
+    vertical-align: top;
+}
+
+.RCAdd-info-container
+{
+    color: green;
+    font-size: 12px;
+}
+
+.RCAdd-warning-container
+{
+    color: orange;
+    font-size: 12px;
+}
+
+.RCAdd-vis-td
+{
+    text-align: center;
+}
+
+.RCAdd-vis-remove > img
+{
+    margin: 3px;
+}
+
+.RCAdd-maplayers-container .treeview{
+    margin-left: -5px;
+}
+
+.manual-type-widget div
+{
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    margin: 0px 2px;
+    cursor: pointer;
+    background-image: url(../img/manual_types.png)
+}
+
+.manual-polygon
+{
+    background-position: -96px 0px;
+}
+
+.manual-polygon.manual-active-type
+{
+    background-position: -120px 0px;
+}
+
+.manual-linestring
+{
+    background-position: -48px 0px;
+}
+
+.manual-linestring.manual-active-type
+{
+    background-position: -72px 0px;
+}
+
+.manual-point
+{
+    background-position: -0px 0px;
+}
+
+.manual-point.manual-active-type
+{
+    background-position: -24px 0px;
+}
+
+.layer-advanced-title
+{
+    padding: 3px 0px;
+    vertical-align: top;
+}
+
+.layer-fieldset
+{
+    padding-bottom: 5px;
+    border: 1px solid #DEDEDE;
+    margin-bottom: 10px;
+}
+
+.layer-fieldset > [disabled] *
+{
+    color: gray;
+}
+
+.layer-fieldset > fieldset
+{
+    border: none;
+}
+
+.layer-fieldset > legend
+{
+    padding: 0px 2px;
+    margin-left: 4px;
+}
+
+.layer-fieldset > legend input
+{
+    margin-right: 3px;
+}
+
+.layer-fieldset > legend *
+{
+    vertical-align: middle;
+}
+
+.layer-fieldset-invisible {
+    border: none;
+}
+
+.layer-container-outer {
+    position: absolute;
+    top: 30px;
+    bottom: 20px;
+    width: 100%;
+}
+
+.layer-container-inner {
+    height: 100%;
+    overflow-y: auto;
+}
+
+.defaultMapLangContainer
+{
+    margin-left: 3px;
+}
+
+.defaultMapLangContainer input
+{
+    vertical-align: middle;
+    margin-right: 2px;
+}
+
+.defaultMapLangContainer > label
+{
+    margin-right: 9px;
+}
+#warningContainer
+{
+    padding: 6px;
+    font-size: 12px;
+    font-weight: bold;
+    background: orange;
+    border-radius: 10px;
+    margin-top: 3px;
+    float: left;
+}
+
+.maps-manager-active {
+    background-color: #fcfcfc;
+}
+
+.buttonLink.maps-manager-mapname {
+    text-decoration: none;
+    overflow-x: hidden;
+    display: inline-block;
+    width: 100%;
+    text-overflow: ellipsis;
+}
+
+.maps-manager-owner {
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+}
+
+/* Group editor */
+.group-editor-search-title {
+    border-bottom: solid 1px #DEDEDE;
+    text-align: center;
+    padding-bottom: 4px;
+    font-weight: bold;
+}
+
+.group-editor-tab-container {
+    position: absolute;
+    top: 29px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    padding-bottom: 6px;
+    overflow-y: overlay;
+    overflow-x: hidden;
+}
+
+.group-editor-blm-available, .group-editor-blm-map {
+    width: 50%;
+    height: 100%;
+    vertical-align: top;
+    border: 1px #DEDEDE solid;
+}
+
+.group-editor-blm-ul {
+    height: 100%;
+}
+
+.group-editor-blm-item {
+    font-size: 12px;
+    margin: 2px;
+    background-color: lightblue;
+    padding: 2px 5px;
+    cursor: move;
+    border: 1px gray solid;
+}
+
+.group-editor-blm-available .group-editor-blm-item {
+    background-color: gainsboro;
+}
+
+.group-editor-blm-item.group-editor-blm-missing-item {
+    background-color: #EBC5BD;
+}
+
+.group-editor-blm-title {
+    text-align: center;
+    font-size: 12px;
+    border: 1px #DEDEDE solid;
+    height: 20px;
+}
+
+.group-editor-blm-table {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 1px; /* To remove scrollbar in Chrome */
+}
+
+.group-editor-onload {
+    width: 100%;
+    height: 100%;
+    display: block;
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+/* Common icons */
+.gmx-icon-edit {
+    width: 11px;
+    height: 11px;
+    background-image: url(../img/edit_small.png);
+    display: inline-block;
+    cursor: pointer;
+}
+
+.gmx-icon-choose {
+    width: 11px;
+    height: 9px;
+    background-image: url(../img/choose2.png);
+    display: inline-block;
+    cursor: pointer;
+}
+
+.gmx-icon-choose:hover {
+    background-image: url(../img/choose2_a.png);
+}
+
+.gmx-icon-close {
+    width: 7px;
+    height: 7px;
+    cursor: pointer;
+    background: url(../img/redesign/icons2.png);
+    background-position: -79px -6px;
+}
+
+.gmx-icon-progress {
+    background: url(../img/progress.gif);
+    width: 16px;
+    height: 16px;
+}
+
+.gmx-icon-recycle {
+    display: inline-block;
+    width: 10px;
+    height: 12px;
+    background: url(../img/recycle.png);
+    cursor: pointer;
+}
+
+.gmx-icon-recycle:hover {
+    background: url(../img/recycle_a.png);
+}
+
+.gmx-icon-vector {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: url(../img/vector.png);
+    cursor: pointer;
+}
+
+.gmx-icon-multiraster {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: url(../img/multi.png);
+    cursor: pointer;
+}
+
+.gmx-icon-raster {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: url(../img/rastr.png);
+    cursor: pointer;
+}
+
+.gmx-icon-downtriangle {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(../img/down.png);
+    cursor: pointer;
+}
+
+.gmx-icon-downtriangle:hover {
+    background: url(../img/down_a.png);
+}
+
+.gmx-icon-uptriangle {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(../img/up.png);
+    cursor: pointer;
+}
+
+.gmx-icon-uptriangle:hover {
+    background: url(../img/up_a.png);
+}
+
+/* Tabs panel */
+.tabsCanvas .gmx-icon-close {
+    position: absolute;
+    right: 14px;
+    top: 10px;
+}
+
+.tabsCanvas .gmx-icon-edit {
+    position: absolute;
+    right: 34px;
+    top: 8px;
+}
+
+.tabsCanvas .canvas{
+    position: relative;
+    padding: 6px 0px 6px 8px;
+}
+
+.tabsCanvas .tabName{
+    margin-right: 52px;
+}
+
+.addtabs-container {
+    text-align: center;
+    padding-top: 12px;
+}
+
+.addtabs-title-input {
+    width: 240px;
+    margin-bottom: 10px;
+}
+
+.addtabs-title-description {
+    width: 240px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.addtabs-info {
+    text-align: left;
+    padding-left: 12px;
+}
+
+.leftmenu-canvas#left_layers {
+    background-color: #ffffff;
+}
+
+#left_layers.leftmenu-canvas {
+    border: none;
+}
+
+/* Create map dialog*/
+.createMap-container {
+    text-align: center;
+    padding: 0px 4px;
+}
+
+.createMap-input {
+    margin: 0px;
+}
+
+.createMap-button {
+    margin: 12px 0px 4px 0px;
+    padding: 0px 5px;
+}
+
+#mapsList {
+    overflow: hidden;
+}
+
+#mapsTableParent .tableBody > table{
+    table-layout: fixed;
+}
+
+.mapslist-search-table {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.mapslist-search-table * {
+    font-size: 12px;
+}
+
+.mapslist-search-name, .mapslist-search-owner {
+    margin-left: 15px;
+}
+
+.mapslist-hint {
+    position: absolute;
+    width: 200px;
+    bottom: 20px;
+    right: 30px;
+    font-size: 20px;
+    color: #DDD;
+}
+
+#mapsList .gmx-icon-progress{
+    background-position: 50%;
+    background-repeat: no-repeat;
+    width: auto;
+}
+
+#mapsList .treeview {
+    margin-left: -2px;
+}
+
+.layers-before {
+    border: 1px solid #DDD;
+    padding: 9px 0px 10px 6px;
+    margin-bottom: 8px;
+}
+
+.layers-after {
+    border: 1px solid #DDD;
+    padding: 9px 0px 10px 6px;
+    margin-top: 8px;
+}
+
+.layers-tree {
+    border: 1px solid #DDD;
+    padding: 10px 0px 10px 0px;
+}
+
+.layers-tree > .filetree > li > div {
+    display: none;
+}
+
+.layers-tree > .filetree > li > ul {
+    margin-top: 0px;
+}
+
+.layers-visibility-checkbox {
+    margin-right: 5px;
+}
+
+.mainmap-title {
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    overflow-x: hidden;
+    width: 320px;
+    text-overflow: ellipsis;
+    padding: 7px 0px 7px 15px;
+}
+
+.addtabs-lang-placeholder {
+    position: absolute;
+    top: 4px;
+    right: 10px;
+}
+
+.tabs-edit {
+    position: absolute;
+    height: 11px;
+    position: absolute;
+    right: 28px;
+    height: 11px;
+    top: 5px;
+}
+
+.language-item {
+    cursor: pointer;
+    margin-left: 3px;
+    padding-bottom: 1px;
+    border-bottom: 1px dotted;
+}
+
+.language-item.language-selected {
+    cursor: default;
+    border-bottom: none;
+}
+
+.leaflet-control-layers-overlays span {
+    font-size: 12px;
+}
+
+.leaflet-control-layers.leaflet-control-layers-expanded.leaflet-control {
+    padding: 8px 12px 8px 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.leaflet-control-layers-selector {
+    margin-right: 3px;
+}
+
+/* login dialog */
+.loginMainDiv {
+    text-align: center;
+}
+
+.loginMainDiv .inputLogin, .loginMainDiv .inputPass {
+    width: 200px;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+.loginLabel {
+    font-size: 12px;
+}
+
+.ui-widget .loginButton {
+    padding: 0px 7px;
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+.loginLinks {
+    margin-left: 14px;
+}
+
+.filterCanvas > ul > li > .hitarea {
+    margin-top: 5px;
+}
+/* Toolbar Icons */
+.leaflet-gmx-icon-boxzoom, .leaflet-gmx-icon-boxzoom-dashed-rounded {
+    background-position: -623px 2px;
+}
+.leaflet-gmx-icon-boxzoom-active, .leaflet-gmx-icon-boxzoom-dashed-rounded-active {
+    background-position: -623px -24px;
+}
+
+.leaflet-gmx-icon-saveMap {
+    background-position: -329px -59px;
+}
+
+.leaflet-gmx-icon-uploadFile {
+    background-position: -236px -59px;
+}
+
+.leaflet-gmx-icon-editTool {
+    background-position: -204px 1px;
+    margin-right: 10px;
+}
+
+.leaflet-gmx-icon-editTool-active {
+    background-position: -204px -25px;
+}
+
+.leaflet-gmx-icon-createVectorLayer {
+    background-position: -49px -58px;
+}
+
+.leaflet-gmx-icon-createRasterLayer {
+    background-position: -204px -59px;
+}
+
+.leaflet-gmx-icon-gridTool {
+    background-position: -267px -58px;
+}
+
+.leaflet-gmx-icon-gridTool-active {
+    background-position: -267px -91px;
+}
+
+.leaflet-gmx-icon-bookmark {
+    background-position: -113px -57px;
+}
+
+.leaflet-gmx-icon-gmxprint {
+    background-position: -48px 1px;
+}
+
+.leaflet-gmx-icon-group-drawing {
+    margin-right: 10px;
+}
+
+.gmx-about {
+    margin: 0px 16px;
+}
+
+.gmx-about > p {
+    margin-bottom: 1em;
+    line-height: 1.4em;
+}
+
+.ui-widget-content .gmx-about a{
+    color: #000000;
+}
+
+.ui-widget-content .gmx-about a:hover {
+    color: #FC830B
+}
+
+.gmx-prompt-canvas {
+    margin: 0px 20px 0px 10px;
+}
+
+.gmx-prompt-input {
+    width: 100%;
+}
+
+#flash .leaflet-gmx-copyright-window {
+    box-shadow: rgba(100, 100, 100, 0.7) 0px 0px 3px;
+    border: none;
+    margin: 3px;
+    background-color: #FFFFFF;
+}
+
+/* External maps */
+.externalMapsCanvas .gmx-icon-close {
+    position: absolute;
+    top: 6px;
+    right: 1px;
+}
+
+.leaflet-control.gmx-slider-control {
+    position: absolute;
+    top: 45px;
+    left: 48px;
+
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.20);
+    background-color: rgba(255, 255, 255, 0.3);
+
+    z-index: -1;
+}
+
+.gmx-slider-control.invisible {
+    display: none;
+}
+
+
+.gmxPopup div p {
+    margin: 2px 0px;
+}
+
+.multilayer-row-title-outer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.multilayer-row-title-inner {
+    white-space: nowrap;
+    position: absolute;
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+    padding: 1px 0px 0px 3px;
+}
+
+.multilayer-row-td {
+    text-align: center;
+}
+
+.layer-editor-legend-image {
+    margin-left: 3px;
+}
+
+.layer-editor-quicklooks {
+    margin: 3px 0px 3px 6px;
+}
+
+.removeGroup-container {
+    text-align: center;
+}
+
+.removeGroup-remove {
+    margin-top: 10px;
+}
+
+.removeGroup-layers {
+    margin-right: 5px;
+}
+
+.gmx-disabled {
+    color: #999999;
+    pointer-events: none;
+    cursor: default;
+}
+
+.photo-image-clickable {
+	cursor: pointer;
+}

@@ -1,0 +1,55 @@
+<?xml version="1.0" standalone="no" ?>
+<IC_Legend_Document>
+    <Legend_Entries ENTRY_Default_Newcode="-1" ENTRY_Default_Color="16777215">
+        <ENTRY>
+            <Label>распаханная почва / нет фотосинтеза</Label>
+            <Color>
+                <Part_Red>128</Part_Red>
+                <Part_Green>0</Part_Green>
+                <Part_Blue>0</Part_Blue>
+                <Part_Density>255</Part_Density>
+            </Color>
+            <Code>1</Code>
+        </ENTRY>
+        <ENTRY>
+            <Label>нераспаханная почва / нет фотосинтеза</Label>
+            <Color>
+                <Part_Red>255</Part_Red>
+                <Part_Green>255</Part_Green>
+                <Part_Blue>128</Part_Blue>
+                <Part_Density>255</Part_Density>
+            </Color>
+            <Code>2</Code>
+        </ENTRY>
+        <ENTRY>
+            <Label>низкая активность фотосинтеза</Label>
+            <Color>
+                <Part_Red>128</Part_Red>
+                <Part_Green>255</Part_Green>
+                <Part_Blue>128</Part_Blue>
+                <Part_Density>255</Part_Density>
+            </Color>
+            <Code>3</Code>
+        </ENTRY>
+        <ENTRY>
+            <Label>средняя активность фотосинтеза</Label>
+            <Color>
+                <Part_Red>0</Part_Red>
+                <Part_Green>255</Part_Green>
+                <Part_Blue>0</Part_Blue>
+                <Part_Density>255</Part_Density>
+            </Color>
+            <Code>4</Code>
+        </ENTRY>
+        <ENTRY>
+            <Label>высокая активность фотосинтеза</Label>
+            <Color>
+                <Part_Red>0</Part_Red>
+                <Part_Green>128</Part_Green>
+                <Part_Blue>0</Part_Blue>
+                <Part_Density>255</Part_Density>
+            </Color>
+            <Code>5</Code>
+        </ENTRY>
+    </Legend_Entries>
+</IC_Legend_Document>

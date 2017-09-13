@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>basic animation example</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet-src.js"></script>
+        <script src="../CssAnimation.js"></script>
+        <script src="../AnimationSequence.js"></script>
+        <style type="text/css">
+            .btn { position: absolute; top: 200px; }
+
+            .foo {
+                border: 8px dashed #990000;
+                background: #cc0000;
+            }
+
+            .foo-animated {
+                transition: opacity .5s ease, height .15s ease, width .25s ease;
+            }
+
+            .foo-beforeAnimation-opacity { opacity: 1; }
+            .foo-afterAnimation-opacity { opacity: .5; }
+
+            .foo-beforeAnimation-height { height: 100px; }
+            .foo-afterAnimation-height { height: 50px; }
+
+            .foo-beforeAnimation-width { width: 50px; }
+            .foo-afterAnimation-width { width: 100px; }
+        </style>
+    </head>
+    <body>
+        <div class="foo"></div>
+        <button class="btn">animate</button>
+        <script>
+            var el = document.querySelector('.foo');
+            
+            var animation = new nsGmx.AnimationSequence([
+                new nsGmx.CssAnimation({
+                    el: el, 
+                    prefix: 'foo', 
+                    property: 'opacity'
+                }),
+                new nsGmx.CssAnimation({
+                    el: el, 
+                    prefix: 'foo', 
+                    property: 'height'
+                }),
+                new nsGmx.CssAnimation({
+                    el: el, 
+                    prefix: 'foo', 
+                    property: 'width'
+                })
+            ]);
+
+            document.querySelector('.btn').addEventListener('click', function() {
+                animation.toggle().then(function() {
+                    console.log('toggled');
+                }, function(err) {
+                    console.error(err);
+                });
+            });
+        </script>
+    </body>
+</html>

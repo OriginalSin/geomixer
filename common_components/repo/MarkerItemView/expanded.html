@@ -1,0 +1,34 @@
+<% if (title || iconUrl) { %>
+    <div class="markerItemViewExpanded-header">
+        <% if (iconUrl) { %>
+            <div class="markerItemViewExpanded-markerIconContainer">
+                <img class="markerItemViewExpanded-markerIcon markerItemViewExpanded-markerIcon" src="<%= iconUrl %>"/>
+            </div>
+        <% } %>
+        <% if (title) { %>
+            <div class="markerItemViewExpanded-titleContainer">
+                <div class="markerItemViewExpanded-title markerItemViewExpanded-title"><%= title %></div>
+            </div>
+        <% } %>
+    </div>
+<% } %>
+<% if (description) { %>
+    <div class="markerItemViewExpanded-description"><%= description %></div>
+<% } %>
+<% if (date || url) { %>
+    <div class="markerItemViewExpanded-footer">
+        <% if (date) { %>
+            <div class="markerItemViewExpanded-dateContainer">
+                <div class="markerItemViewExpanded-date"><%= nsGmx.Utils.formatDate(date, 'DD.MM.YYYY hh:mm') %></div>
+            </div>
+        <% } %>
+        <div class="markerItemViewExpanded-locationIconContainer">
+            <div class="markerItemViewExpanded-locationIcon icon-location"></div>
+        </div>
+        <% if (url) { %>
+            <div class="markerItemViewExpanded-urlContainer">
+                <a class="markerItemViewExpanded-url"  href="<%= url %>" target="_blank"><%= nsGmx.Translations.getText('markerItemView.sourceLink') %></a>
+            </div>
+        <% } %>
+    </div>
+<% } %>

@@ -1,0 +1,180 @@
+﻿.search-results-section {
+	white-space: nowrap;
+}
+
+.search-results-section button{
+	cursor: pointer;
+}
+
+.search-results-section button img{
+	vertical-align: text-bottom;
+	width: 12px;
+	height: 12px;
+}
+.search-results-count::before{
+	content: '[';
+}
+.search-results-count::after{
+	content: ']';
+}
+.search-results-count{
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+/*
+.leaflet-gmx-zoomParent{
+	position: relative !important;
+	top: auto !important;
+	left: auto !important;
+	clear: none !important;
+}
+*/
+
+.search-results-section .search-results-content{
+	padding: 5px 0px 0px 5px;
+	clear: both;
+}
+
+.images-search-section-header > * {
+	float: left;
+	margin-right: 3px;
+	margin-left: 3px;
+}
+
+.search-results-section .search-results-clear{
+	cursor: pointer;
+	border: none;
+	color: Blue;
+	text-decoration: underline;
+}
+
+.search-results-section .results-images-download {
+	cursor: pointer;
+}
+
+.search-results-section .collapse-toggler {
+	float: right;
+	margin: 1px 0px;
+	width: 16px;
+	height: 16px;
+	cursor: pointer;
+	background-position: left top;
+	background-repeat: no-repeat;
+}
+
+.search-results-section .collapse-toggler .collapsed {
+	background-image: url('img/up.png');
+}
+
+.search-results-section .collapse-toggler .expanded {
+	background-image: url('img/down.png');
+}
+
+.search-results-section .non-covered-toggle{
+	margin: 0px 3px 0px 0px;
+}
+
+.search-results-section .non-covered-toggle input[type="checkbox"]{
+	vertical-align: text-bottom;
+}
+
+.search-results-section .ds-place > span:first-child{
+	float: left;
+}
+
+.images-search-section-toolbar {
+	margin: 0px 5px 10px 5px;
+}
+
+.images-search-section-toolbar > * {
+	float: left;
+}
+
+.icon-satellite{
+	background-image: url("img/sat.png");
+}
+.icon-satellite-asc{
+	background-image: url("img/sat-asc.png");
+}
+.icon-satellite-desc{
+	background-image: url("img/sat-desc.png");
+}
+
+.icon-tilt{
+	background-image: url("img/angle.png");
+}
+.icon-tilt-asc{
+	background-image: url("img/angle-asc.png");
+}
+.icon-tilt-desc{
+	background-image: url("img/angle-desc.png");
+}
+
+.icon-cloud{
+	background-image: url("img/cloud.png");
+}
+.icon-cloud-asc{
+	background-image: url("img/cloud-asc.png");
+}
+.icon-cloud-desc{
+	background-image: url("img/cloud-desc.png");
+}
+
+.icon-date{
+	background-image: url("img/calendar.png");
+}
+.icon-date-asc{
+	background-image: url("img/calendar-asc.png");
+}
+.icon-date-desc{
+	background-image: url("img/calendar-desc.png");
+}
+
+.icon-visibility{
+	background-image: url("img/visibility.png");
+}
+.icon-visibility-asc{
+	background-image: url("img/visibility-asc.png");
+}
+.icon-visibility-desc{
+	background-image: url("img/visibility-desc.png");
+}
+
+.image-toolbar{
+	background-color: white;
+	white-space: nowrap;
+	cursor: pointer;
+	border: 1px solid #66CCFF;
+	padding: 0px;
+}
+
+.add-visible
+{
+    cursor: pointer;
+    float: right;
+    width: 19px;
+    height: 12px;
+    background-image: url('img/add-visible.png');
+    margin-top: 2px;
+    margin-right: 10px;
+}
+.add-visible:hover
+{
+    background-image: url('img/add-visible_a.png');
+}
+
+.add-all
+{
+    cursor: pointer;
+    float: right;
+    width: 19px;
+    height: 12px;
+    background-image: url('img/add-all.png');
+    margin-top: 2px;
+    margin-right: 10px;
+}
+.add-all:hover
+{
+    background-image: url('img/add-all_a.png');
+}

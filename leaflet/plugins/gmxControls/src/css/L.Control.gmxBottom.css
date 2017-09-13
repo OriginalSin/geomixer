@@ -1,0 +1,27 @@
+.leaflet-bottom .leaflet-gmx-copyright-location.leaflet-control {
+    margin: 0;
+}
+
+.leaflet-gmx-copyright-location {
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    height: 20px;
+    position: absolute;
+    color: #000000;
+    font-family: Tahoma;
+    font-size: 9pt;
+    word-break: break-all;
+    overflow: hidden;
+}
+
+.leaflet-gmx-copyright-location-bg {
+    height: 20px;
+    opacity: 0.5;
+    width: 100%;
+    background-color: white;
+}
+
+.leaflet-bottom.gmx-bottom-shift {
+    bottom: 20px;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>client</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" href="lib/bootstrap2/css/bootstrap.css">
+        <script src="lib/jquery/jquery.js"></script>
+        <script src="lib/bootstrap2/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
+        <script src="authManager.js"></script>
+        <script src="client.js"></script>
+
+        <style>
+            .btn:focus {
+                outline: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <span class='sys-message'></span>
+        <div class="container">
+            <p class="lead">auth demo</p>
+            <div class="row">
+                <div class="span4">
+                    <div>
+                        <strong>request resources:</strong>
+                    </div>
+                    <div>
+                        <ul>
+                            <li><a class="btn-maps" href="#">maps.kosmosnimki.ru</a></li>
+                            <li><a class="btn-maps-post" href="#">maps.kosmosnimki.ru (POST)</a></li>
+                            <li><a class="btn-fires" href="#">fires.kosmosnimki.ru</a></li>
+                            <li><a class="btn-geocode" href="#">geocode.kosmosnimki.ru</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="span4">
+                    <div>
+                        <strong>user info:</strong>
+                    </div>
+                    <div>
+                        <span class="userInfo"></span>
+                    <button class="btn btn-link btn-userInfo">refresh</a>
+                </div>
+            </div>
+            <div class="span4">
+                <div class="pull-right">
+                    <div class="alert alert-auth alert-danger" role="alert"></div>
+                    <div class="login">
+                        <div class="login-credentials">
+                            <input type="text" class="login-loginText" placeholder="login">
+                            <input type="password" class="login-passwordText" placeholder="password">
+                            <button class="btn btn-loginCredentials">login with credentials</button>
+                        </div>
+                        <hr/>
+                        <div class="login-oAuth">
+                            <button class="btn btn-loginOAuth">login with oAuth</button>
+                        </div>
+                        <hr/>
+                        <div class="login-oAuth">
+                            <button class="btn btn-loginGoogle">login with Google</button>
+                        </div>
+                    </div>
+                    <div class="logout">
+                        <button class="btn btn-logout">logout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr/>
+        <div class="row">
+            <div class="span2"><strong class="lastResponseLabel">responses:</strong></div>
+            <div class="span10"><table class="console table table-striped"></table></div>
+        </div>
+    </div>
+</body>
+</html>

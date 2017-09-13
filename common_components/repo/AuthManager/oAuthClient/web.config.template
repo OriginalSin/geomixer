@@ -1,0 +1,25 @@
+﻿<?xml version="1.0"?>
+<configuration>
+  <appSettings>
+	<add key="ClientId" value="1"/>
+	<add key="ClientSecret" value="DE0EA580-7F39-4880-8C1E-55652F4A20D0"/>    
+	<add key="Geomixer" value="http://maps.kosmosnimki.ru"/>
+	<add key="Geocode" value="http://geocode.kosmosnimki.ru"/>
+	<add key="Fireservice" value="http://fires.kosmosnimki.ru/SAPIv2"/>
+	<add key="Subscriptions" value="http://fires.kosmosnimki.ru/SAPIv2"/>
+	<add key="Catalog" value="http://search.kosmosnimki.ru"/>
+	<!-- !!!!!!!!!!!!!!!!!!!!!!!!!! -->
+    <add key="MyKosmosnimki" value="http://my.kosmosnimki.ru" />
+  </appSettings>
+  <system.webServer>
+	<handlers>
+  	<add name="oAuthCallbackAshx" preCondition="integratedMode" verb="GET" path="oAuth2/oAuthCallback.ashx" type="CommonKosmosnimkiUtil.oAuth.Handlers.oAuthCallback, CommonKosmosnimkiUtil"/>
+  	<add name="oAuthCallbackHtm" preCondition="integratedMode" verb="GET" path="oAuth2/oAuthCallback.htm" type="CommonKosmosnimkiUtil.oAuth.Handlers.oAuthCallbackHtml, CommonKosmosnimkiUtil"/>
+	</handlers>
+  </system.webServer>
+  
+  <system.web>
+    <customErrors mode="Off"/>
+    <compilation debug="true"/>
+  </system.web>
+</configuration>

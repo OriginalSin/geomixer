@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GmxControls Leaflet Quick Start Guide Example</title>
+	<meta charset="utf-8" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@0.7.7/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@0.7.7/dist/leaflet.js"></script>
+-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin=""></script>
+
+    <link rel="stylesheet" href="../src/css/L.Control.gmxIcon.css" />
+	<script src="../src/js/L.Control.gmxIcon.js"></script>
+
+    <style>
+        html, body, #map {
+            height: 100%;
+            width: 100%;
+            margin: 0px;
+        }
+        #infoPanel {
+            position: absolute;
+			left: 0px;
+			right: 0px;
+			top: 21px;
+            text-align: center;
+			z-index: 1000;
+        }
+        
+        #info {
+			background-color: #ffffff;
+			border-radius: 5px;
+            box-shadow: 0 1px 7px rgba(0,0,0,0.65);
+            padding: 10px;
+        }
+        
+        .leaflet-gmx-icon-boxzoom {
+            background-image: url("../src/css/img/gmxSprite.png");
+            background-position: -624px 1px;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            clear: none;
+            float: left;
+            margin-left: 6px !important;
+        }
+        .leaflet-gmx-icon-boxzoom:hover, .leaflet-gmx-icon-boxzoom-active {
+            background-position: -624px -25px;
+        }
+    </style>
+</head>
+<body>
+	<div id="map"></div>
+    <div id="infoPanel">
+        <span id="info">
+                Use L.control.gmxIcon to create user defined control - in this example create control for Leaflet BoxZoom feature
+        </span>
+    </div>
+
+	<script>
+		var osm = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+			maxZoom: 18,
+			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'
+		});
+		var map = new L.Map('map', {layers: [osm], center: new L.LatLng(50, 20), attributionControl: false, zoomControl: false, zoom: 3});
+
+        map.addControl(L.control.gmxIcon({
+            id: 'boxzoom',
+            toggle: true,
+            title: 'BoxZoom',
+            onAdd: function (control) {
+                var map = control._map,
+                    _onMouseDown = map.boxZoom._onMouseDown;
+                map.boxZoom._onMouseDown = function (e) {
+                    _onMouseDown.call(map.boxZoom, {
+                        clientX: e.clientX,
+                        clientY: e.clientY,
+                        which: 1,
+                        shiftKey: true
+                    });
+                }
+                map.on('boxzoomend', function () {
+                    map.dragging.enable();
+                    map.boxZoom.removeHooks();
+                    control.setActive(false);
+                });
+            },
+            stateChange: function (control) {
+                var map = control._map;
+                if (control.options.isActive) {
+                    map.dragging.disable();
+                    map.boxZoom.addHooks();
+                } else {
+                    map.dragging.enable();
+                    map.boxZoom.removeHooks();
+                }
+            }
+        }));
+        
+	</script>
+</body>
+</html>

@@ -1,0 +1,549 @@
+.ndvigraphics-control {
+    /*width: 750px;
+    height: 300px;
+    background-color: #F0F0F0;
+    margin-right: 5px !important;
+    margin-bottom: -5px !important;
+    box-shadow: rgba(100, 100, 100, 0.7) 0px 0px 3px;*/
+    width: 100%;
+    height: 100%;
+}
+
+.ndvigraphics-tablo {
+    width: 570px;
+    height: 255px;
+    float: right;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.ndvigraphics-tablo2 {
+    width: 570px;
+    height: 255px;
+    float: right;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.ndvigraphics-right {
+    width: 205px;
+    height: 270px;
+    margin-top: 30px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    left: 0;
+}
+
+
+.ndvigraphics-bottom {
+    width: 680px;
+    /* height: 55px; */
+    bottom: 0px;
+    position: absolute;
+    right: 0px;
+}
+
+.ndvigraphics-label {
+    float: left;
+    padding: 17px 0px 0px 11px;
+    font-family: Verdana;
+    font-size: 11px;
+}
+
+.ndvigraphics-combo {
+    width: 135px;
+    margin-left: 3px;
+    font-family: Verdana;
+    font-size: 11px;
+}
+
+.ndvigraphics-circle {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    border-color: red;
+    border-style: solid;
+    border-width: 2px;
+    margin-left: 3px;
+}
+
+.ndvigraphics-graphinfo-color {
+    padding: 5px 0px 0px 0px !important;
+    cursor: pointer;
+    width: 14px;
+    height: 14px !important;
+}
+
+.ndvigraphics-graphinfo-visib {
+    width: 10px;
+    margin-top: 1px !important;
+}
+
+.ndvigraphics-graphinfo-descr {
+    width: 160px !important;
+}
+
+.ndvigraphics-graphinfo-btnClose {
+    float: right !important;
+    cursor: pointer;
+    width: 10px !important;
+    background-image: url(close.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 16px;
+    padding-left: 10px !important;
+    padding-right: 0px !important;
+}
+
+    .ndvigraphics-graphinfo-btnClose:hover {
+        background-image: url(close_orange.png);
+    }
+
+
+.ndvigraphics-graphinfo-btnCsv {
+    float: right !important;
+    cursor: pointer;
+    width: 10px !important;
+    background-image: url(csv.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 16px;
+    padding-left: 10px !important;
+    padding-right: 0px !important;
+}
+
+    .ndvigraphics-graphinfo-btnCsv:hover {
+        background-image: url(csv_orange.png);
+    }
+
+.ndvigraphics-graphinfo-btnClone {
+    float: right !important;
+    cursor: pointer;
+    width: 10px !important;
+    background-image: url(clone.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 16px;
+    padding-left: 12px !important;
+    padding-right: 0px !important;
+}
+
+    .ndvigraphics-graphinfo-btnClone:hover {
+        background-image: url(clone_orange.png);
+    }
+
+.ndvigraphics-graphinfo {
+    float: left;
+    padding-right: 4px;
+    font-family: Tahoma;
+    font-size: 12px;
+    padding-top: 4px !important;
+    padding-left: 3px;
+    color: black;
+}
+
+.ndvigraphics-graphinfo-color {
+    padding-top: 7px !important;
+}
+
+.ndvigraphics-graphinfo-year {
+    padding-left: 2px;
+    width: 47px !important;
+}
+
+.ndvigraphics-graphinfo-container {
+    float: left;
+    /*width: 198px;*/
+    height: 18px;
+    padding-top: 0px;
+    padding-bottom: 3px;
+    padding-left: 1px;
+}
+
+.ndvigraphics-graphinfo-loading {
+    background-image: url(loading.gif);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.ndvigraphics-balloon {
+    width: 190px;
+    height: 50px;
+    top: 28px;
+    right: 12px;
+    position: absolute;
+    border: none;
+    z-index: 50000;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1px;
+    display: none;
+    box-shadow: rgba(100, 100, 100, 0.7) 0px 0px 3px;
+}
+
+.ndvigraphics-balloon-line {
+    width: 100%;
+    height: 20px;
+    margin-bottom: 3px;
+}
+
+.ndvigraphics-balloon-item {
+    float: left;
+    font-size: 12px;
+    font-family: Tahoma;
+    margin-right: 3px;
+    margin-left: 5px;
+}
+
+.ndvigraphics-balloon-label {
+    font-size: inherit;
+    font-family: inherit;
+    color: rgb(138,138,138);
+    text-align: right;
+    float: left;
+}
+
+.ndvigraphics-balloon-text {
+    float: left;
+    font-size: inherit;
+    font-family: inherit;
+    height: 17px;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.ndvigraphics-grphbtn-container {
+    position: absolute;
+    width: 220px;
+    height: 45px;
+    bottom: 0;
+    right: 0;
+}
+
+.ndvigraphics-grphbtn {
+    width: 180px;
+    height: 25px;
+    margin: 6px 5px 5px 20px;
+}
+
+.ndvigraphics-optionsPanel {
+    margin-top: 7px;
+    margin-left: 22px;
+}
+
+/*.ndvigraphics-label-modis {
+    margin-top: 7px;
+    margin-left: 22px;
+}
+
+.ndvigraphics-label-hr {
+    margin-top: 7px;
+    margin-left: 22px;
+}*/
+
+.ndvigraphics-radiosgroup {
+    height: 22px;
+}
+
+.ndvigraphics-radio {
+    float: left;
+    margin-top: 3px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.ndvigraphics-radioLabel {
+    float: left;
+    cursor: pointer;
+    margin-top: 2px;
+}
+
+
+.ndvigraphics-control-minimilzed {
+    width: 570px !important;
+}
+
+.ndvigraphics-balloon-minimized {
+    right: 32px !important;
+}
+
+.ui-state-default .ui-icon.ui-icon-hidethick {
+    background: url(hide.png) 0px 0px;
+}
+
+.ui-state-hover .ui-icon.ui-icon-hidethick {
+    background: url(hide_orange.png) 0px 0px;
+}
+
+.ui-state-default .ui-icon.ui-icon-minimizethick {
+    background: url(minimize.png) 0px 0px;
+}
+
+.ui-state-hover .ui-icon.ui-icon-minimizethick {
+    background: url(minimize_orange.png) 0px 0px;
+}
+
+.ui-state-default .ui-icon.ui-icon-maximizethick {
+    background: url(maximize.png) 0px 0px;
+}
+
+.ui-state-hover .ui-icon.ui-icon-maximizethick {
+    background: url(maximize_orange.png) 0px 0px;
+}
+
+.ndviGraphOptions {
+    background-color: white;
+    box-shadow: rgba(100, 100, 100, 0.7) 0px 0px 3px;
+    position: absolute;
+    z-index: 100000;
+}
+
+#ndvigraphics-miniMenuPointer {
+    width: 13px;
+    height: 13px;
+    float: left;
+    background: url(miniMenu.png) no-repeat 0 0;
+    margin-left: 2px;
+    margin-top: 2px;
+}
+
+
+.ndvigraphics-leftarrowdiv {
+    width: 170px;
+    min-height: 40px;
+    background: white;
+    color: white;
+    padding: 5px;
+    position: relative;
+}
+
+    .ndvigraphics-leftarrowdiv:after, .ndvigraphics-leftarrowdiv:before {
+        right: 100%;
+        top: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+    }
+
+    .ndvigraphics-leftarrowdiv:after {
+        border-color: rgba(136, 183, 213, 0);
+        border-right-color: white;
+        border-width: 5px;
+        margin-top: -15px;
+    }
+
+    .ndvigraphics-leftarrowdiv:before {
+        border-color: rgba(170, 197, 214, 0);
+        border-right-color: rgba(140, 140, 140, 0.75);
+        border-width: 6px;
+        margin-top: -16px;
+    }
+
+
+.ndvigraphics-toparrowdiv {
+    width: 182px;
+    min-height: 40px;
+    background: white;
+    color: white;
+    padding: 5px;
+    position: relative;
+}
+
+    .ndvigraphics-toparrowdiv:after, .ndvigraphics-toparrowdiv:before {
+        bottom: 100%;
+        left: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+    }
+
+    .ndvigraphics-toparrowdiv:after {
+        border-color: rgba(136, 183, 213, 0);
+        border-bottom-color: white;
+        border-width: 6px;
+        margin-left: 35px;
+    }
+
+    .ndvigraphics-toparrowdiv:before {
+        border-color: rgba(170, 197, 214, 0);
+        border-bottom-color: rgba(140, 140, 140, 0.75);
+        border-width: 7px;
+        margin-left: 34px;
+    }
+
+
+
+.ndvigraphics-comboDiv {
+    float: left;
+    width: 105px;
+    padding-left: 7px;
+}
+
+
+#prodSel {
+    width: 100px;
+    font-size: 12px;
+    height: 25px;
+}
+
+.ndvigraphics-yearDivSelect {
+    float: left;
+}
+
+.ndvigraphics-yearDiv {
+    float: left;
+    width: 243px;
+    overflow: hidden;
+}
+
+#yearInp {
+    width: 35px;
+    font-size: 12px;
+    height: 17px;
+}
+
+#ntDivBtnAdd {
+    float: left;
+    display: block;
+    margin-left: 7px;
+}
+
+#ntBtnAdd {
+    /*width: 123px;*/
+    height: 25px;
+}
+
+
+#prodSel_clone {
+    width: 100px;
+    font-size: 12px;
+    height: 21px;
+}
+
+#yearInp_clone {
+    width: 35px;
+    font-size: 12px;
+    height: 17px;
+}
+
+#ntBtnAdd_clone {
+    width: 45px;
+    margin-right: 6px;
+}
+
+.ndvigraphics-prod-panel {
+    float: left;
+    width: 27%;
+    height: 50px;
+}
+
+.ntGraphivsOptionsBalloon {
+    width: 100%;
+    background: white;
+    color: white;
+    position: relative;
+    min-width: 250px;
+}
+
+.yearSelList {
+    height: 25px;
+    margin-left: 11px;
+    width: 1024px;
+}
+
+.ntYearInpDiv {
+    float: left;
+}
+
+.ntYearInp {
+    margin-top: 3px;
+    cursor: pointer;
+}
+
+.ntYearInpLabel {
+    float: left;
+    width: 35px;
+    height: 17px;
+    color: black;
+    font-size: 14px;
+    margin-right: 7px;
+    margin-left: 3px;
+    cursor: pointer;
+}
+
+#ntGraphOptsPrevYear {
+    float: left;
+    width: 10px;
+    height: 13px;
+    position: absolute;
+    left: -6px;
+    background: url(prev.png) no-repeat 0 0;
+    cursor: pointer;
+    margin-top: 3px;
+}
+
+    #ntGraphOptsPrevYear:hover {
+        background: url(prev_orange.png) no-repeat 0 0;
+    }
+
+#ntGraphOptsNextYear {
+    float: right;
+    width: 10px;
+    height: 13px;
+    position: absolute;
+    right: -7px;
+    background: url(next.png) no-repeat 0 0;
+    cursor: pointer;
+    margin-top: 3px;
+}
+
+    #ntGraphOptsNextYear:hover {
+        background: url(next_orange.png) no-repeat 0 0;
+    }
+
+#ntBtnCleanAll {
+    position: absolute;
+    width: 57px;
+    height: 19px;
+    left: 255px;
+    background-image: url(clean.png);
+    top: 5px;
+}
+
+    #ntBtnCleanAll:hover {
+        background: url(clean_orange.png) no-repeat 0 0;
+    }
+
+.ntWeatherStationName{
+	cursor: pointer;
+	text-decoration: underline;
+	float: left;
+	padding-right:5px;
+}
+
+    .ntWeatherStationName:hover {
+        color: orange;
+    }
+
+
+.wYearDiv{
+	float: left;
+	padding-right:5px;
+}
+
+.ndvigraphics-right-grid {
+    width: 205px;
+    height: 270px;
+    margin-top: 300px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    left: 0;
+}

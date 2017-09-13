@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="http://maps.kosmosnimki.ru/api/leaflet/leaflet.css"/>
+<title>ScanEx Web Geomixer - печать карты</title>
+<style>
+* 
+{
+	color:#000000;
+	font-family:sans-serif;
+	font-size:11px;
+	margin:0;
+	padding:0;
+}
+body
+{
+	background-color:#FAFAFE;
+	padding: 0; 
+	border: 0; 
+	margin: 0; 
+	overflow: hidden;
+}
+input.btn
+{
+	cursor: pointer;
+	font-size: 12px;
+	color: #000000;
+}
+
+
+</style>
+<style type="text/css" media="print">
+input
+{
+   display: none;
+}
+
+.gmx_balloon_leg {
+	bottom: -21px !important;
+}
+</style>
+
+<script>
+	var gmxAPI = null;
+	var mapParent = null;
+	var comment = null;
+	var toggler = null;
+	
+	function getWindowWidth()
+	{
+		return (!gmxAPI.isIE) ? window.innerWidth : document.body.clientWidth;
+	}
+
+	function getWindowHeight()
+	{
+		return (!gmxAPI.isIE) ? window.innerHeight : document.body.clientHeight;
+	}
+	function resize()
+	{
+		mapParent.style.width = getWindowWidth() - 40 + 'px';
+		mapParent.style.height = getWindowHeight() - 70 - comment.offsetHeight + 'px';
+	}
+	function toggleComment()
+	{
+		if (comment.style.display == 'none')
+		{
+			comment.style.display = '';
+			toggler.value = 'Скрыть комментарий';
+		}
+		else
+		{
+			comment.style.display = 'none';
+			toggler.value = 'Показать комментарий';
+		}
+		resize();
+	}
+	
+	function printMap()
+	{
+		window.print();
+	}
+
+	var toOut = null;
+	var fromNode = null;
+	var mapPane = null;
+	var balloons = null;
+	var balloonsParent = null;
+
+	function callClose()
+	{
+		if(fromNode) fromNode.appendChild(mapPane);
+	}
+	
+	function callOpener()
+	{
+		var opener = window.dialogArguments || window.opener;
+		if(!gmxAPI) gmxAPI = opener.gmxAPI;
+		if(!comment) comment = document.getElementById("comment");
+		if(!toggler) toggler = document.getElementById("toggler");
+		if(!mapParent) mapParent = document.getElementById("mapParent");
+
+		window.onresize = resize;
+		resize();
+		
+		toOut = mapParent.firstChild;
+		var LMap = gmxAPI._leaflet['LMap'];
+
+		fromNode = LMap._mapPane.parentNode;
+		mapPane = LMap._mapPane;
+		toOut.appendChild(mapPane);
+		
+		balloons = opener.document.getElementsByClassName('gmx_balloon');
+		var balloonsTo = null;
+		for(var i=0; i<balloons.length; i++) {
+			var balloon = balloons[i];
+			if(!balloonsParent) {
+				balloonsParent = balloon.parentNode;
+				balloonsTo = toOut.appendChild(balloonsParent.cloneNode(false));
+				balloonsTo.style.left = '0px';
+			}
+			balloonsTo.appendChild(balloon.cloneNode(true));
+		}
+	}
+</script>
+</head>
+<body onload="callOpener()" onbeforeunload="callClose()">
+	<div id="mapParent" style="margin:20px 20px 10px 20px ;display:block; overflow:hidden; position:relative;"><div></div></div>
+	<div id="comment" style="margin:0px 20px;display:block;padding:5px 0px;"><textarea style="width:100%;height:90px;border:1px solid #999999;"></textarea></div>
+	<div style="height:30px;">
+		<input class="btn" type="submit" value="Печать" onclick="printMap()" style="margin-left:20px;padding:0px 5px;" />
+		<input id="toggler" class="btn" type="submit" value="Скрыть комментарий" onclick="toggleComment()" style="margin-left:20px;padding:0px 5px;" />
+	</div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.tgrid-container table{
+	table-layout: fixed;
+}
+
+.tgrid-container td{
+  padding: 3px;
+  white-space: nowrap;
+}
+
+.tgrid-container {
+	cursor: default;
+}
+
+.tgrid-header .popover-content ul{
+	list-style-type: none;
+	padding: initial;
+	margin-top: auto;
+}
+
+.tgrid-items{
+	/*margin-top: 5px;*/
+	max-height: 200px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.tgrid-items td {
+	border-bottom: 1px solid gainsboro;
+}
+
+.tgrid-icon{
+	float: left;
+	cursor: pointer;
+	width: 16px;
+	height: 16px;
+	background-color: Transparent;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+.tgrid-filter-set{
+	background-image: url("img/filter_set.png");
+}
+
+.tgrid-filter-empty{
+	background-image: url("img/filter_empty.png");
+}
+
+.tgrid-int-cell{
+	text-align: right;  
+}
+.tgrid-wide-cell{
+  width: 100%;
+}
+.tgrid-hidden{
+  display: none;
+}
+.tgrid-count::before{
+	content: '[';
+}
+.tgrid-count::after{
+	content: ']';
+}

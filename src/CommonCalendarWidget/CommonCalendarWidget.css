@@ -1,0 +1,247 @@
+/*CommonCalendar*/
+
+.CommonCalendarWidget .CalendarWidget ui-widget {
+  text-align: center;
+}
+
+.CommonCalendarWidget .CalendarWidget-dates-outside {
+  border-top: solid 1px;
+  border-bottom: solid 1px;
+  border-color: #efefef;
+  color: #808080;
+  border-collapse: collapse;
+  box-sizing: border-box;
+}
+
+.CommonCalendarWidget .CommonCalendarWidget .gmx-input-text {
+  padding: 0;
+}
+
+.CommonCalendarWidget .CalendarWidget-row {
+  height: 30px;
+  line-height: 30px;
+  /*margin-bottom: 2px;*/
+  vertical-align: middle;
+}
+
+.CommonCalendarWidget .CalendarWidget-row > span {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.CommonCalendarWidget .CalendarWidget-iconScrollLeft,
+.CommonCalendarWidget .CalendarWidget-iconScrollRight {
+  width: 30px;
+  border: solid 1px;
+  border-color: #efefef;
+  border-collapse: collapse;
+  box-sizing: border-box;
+}
+
+.CommonCalendarWidget .CalendarWidget-iconScrollLeft {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.CommonCalendarWidget .CalendarWidget-iconScrollRight {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.CommonCalendarWidget .CalendarWidget-timeCell {
+  text-align: center;
+}
+
+.CommonCalendarWidget .CalendarWidget-inputCell {
+  background-color: #f0f0f0;
+  border: 0;
+}
+
+.CommonCalendarWidget .CalendarWidget-dates-outside .CalendarWidget-inputCell {
+  /*cursor: text;*/
+  display: inline-block;
+  height: 100%;
+}
+
+.CommonCalendarWidget .CalendarWidget-dates-outside input {
+  cursor: text;
+}
+
+.CommonCalendarWidget .CalendarWidget-dates-outside .CalendarWidget-inputCell input {
+  cursor: text;
+}
+
+.CommonCalendarWidget .CalendarWidget-timeicon {
+    display: inline-block;
+    width: 30px;
+    width: 30px;
+    border: solid 1px;
+    border-color: #efefef;
+    border-collapse: collapse;
+    box-sizing: border-box;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.CommonCalendarWidget .CalendarWidget-timeicon > img {
+    vertical-align: sub;
+}
+
+.CommonCalendarWidget .time-select {
+  height: 20px;
+  background-color: rgb(255, 255, 255);
+  width: 57px;
+  border-color: #efefef;
+}
+
+.CommonCalendarWidget .CalendarWidget-timeSpan {
+  width: 20px;
+  text-align: center;
+}
+
+.CommonCalendarWidget .CalendarWidget-timeCell {
+  width: 57px;
+}
+
+.CommonCalendarWidget .CalendarWidget-dateBegin,
+.CommonCalendarWidget .CalendarWidget-dateEnd,
+.CommonCalendarWidget .CalendarWidget-timeBegin,
+.CommonCalendarWidget .CalendarWidget-timeEnd  {
+    background-color: #f0f0f0;
+    border: 0;
+}
+
+.CommonCalendarWidget .CalendarWidget-inputCell-inputTimeEnd {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding-right: 4px;
+}
+
+.CommonCalendarWidget .CalendarWidget-show-calendar-icon {
+    cursor: pointer;
+}
+
+.CommonCalendarWidget .CalendarWidget-show-calendar-icon.disabled {
+    cursor: default;
+}
+
+.calendar-layers-container {
+    width: 321px;
+}
+
+.calendar-container {
+    width: 321px;
+    margin: auto;
+}
+
+.calendar-container {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.current-layer-name {
+    display: block;
+    margin-left: 16px;
+    vertical-align: middle;
+}
+
+.CommonCalendarWidget .CalendarWidget.ui-widget {
+    width: 100%;
+    float: left;
+}
+
+.CommonCalendarWidget .CalendarWidget-row {
+    text-align: center;
+}
+
+.CommonCalendarWidget .CalendarWidget-outside {
+    width: 40px;
+    height: 40px;
+    top: 200px;
+    left: 530px;
+    background-color: red;
+}
+
+/*заголовок списка */
+.ui-selectmenu-button {
+    display: inline-block;
+    width: 325px;
+    min-width: 325px;
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid #efefef;
+}
+
+/*название слоя в заголовке*/
+.ui-selectmenu-button span.ui-selectmenu-text {
+    padding: 0;
+    padding-left: 12px;
+    max-width: 210px;
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: normal;
+    overflow: hidden;
+    color: #1471bb;
+}
+
+/*иконка-треугольник в заголовке-селекте*/
+.ui-selectmenu-button span.ui-icon {
+    left: 280px;
+    display: block;
+    text-indent: -99999px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+}
+
+/*открытое меню*/
+.ui-selectmenu-open {
+    width: 325px;
+}
+
+/*слои - обычные строки списка*/
+.ui-selectmenu-open .ui-menu-item {
+    margin: 0;
+    height: 35px;
+    line-height: 35px;
+    width: 325px;
+    padding: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/*оформляем границы выпадающему списку*/
+.ui-selectmenu-open li {
+    border: 1px solid #efefef;
+    border-top: 0;
+}
+
+.layerslist-title {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 150px;
+    max-width: 150px;
+    padding-left: 12px;
+}
+
+.layerslist-dates-times {
+    float: right;
+    font-size: 9px;
+    margin-right: 15px;
+}
+
+.sync-switch-slider-description {
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+.daily-switch {
+    float: right;
+    margin-right: 20px;
+}
+
+.daily-switch input {
+    margin-right: 4px;
+}

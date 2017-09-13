@@ -1,0 +1,1 @@
+ImageTiling.exe -file ../rgb_data/*.tif -container -tile_type png -resampling nearest -nodata "0 0 0" -tiles ./res.tiles -mosaic

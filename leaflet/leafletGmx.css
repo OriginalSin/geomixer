@@ -1,0 +1,12 @@
+/* added css for Geomixer */
+
+.cursorAuto {
+  cursor: auto;
+}
+
+.leaflet-container {
+    cursor: default;
+}
+.leaflet-image-layer {
+	z-index: -1;
+}

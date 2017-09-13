@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BaseLayersManager Quick Start Guide Example</title>
+	<meta charset="utf-8" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet-src.js"></script>
+
+	<script src="http://scanex.github.io/Leaflet-GeoMixer/build/leaflet-geomixer-dev.js?key=U92596WMIH"></script>
+	<script src="http://scanex.github.io/Leaflet.TileLayer.Mercator/src/TileLayer.Mercator.js"></script>
+
+	<script src="http://scanex.github.io/gmxControls/build/gmxControls-dev.js"></script>
+
+	<script src="../src/gmxBaseLayersManager.js"></script>
+	<script src="../src/initBaseLayerManager.js"></script>
+    <style>
+        html, body, #map {
+            height: 100%;
+            width: 100%;
+            margin: 0px;
+        }
+        
+        #infoPanel {
+            position: absolute;
+			left: 0px;
+			right: 0px;
+			top: 21px;
+            text-align: center;
+			z-index: 1;
+        }
+        
+        #info {
+			background-color: #ffffff;
+			border-radius: 5px;
+            box-shadow: 0 1px 7px rgba(0,0,0,0.65);
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+	<div id="map"></div>
+    <div id="infoPanel">
+        <span id="info">
+            Test default Geomixer BaseLayers with L.control.gmxLayers
+        </span>
+    </div>
+
+	<script>
+		var map = new L.Map('map', {layers: [], center: new L.LatLng(55.7, 37.6), zoom: 9});
+        // window.language = 'eng'; // default language russian
+
+        map.gmxControlsManager.init({
+            gmxDrawing: null
+        });
+
+        var blm = map.gmxBaseLayersManager;
+        blm.initDefaults().then(function() {
+            var baseLayers = blm.getAll().map(function(baseLayer) { return baseLayer.id; });
+            blm.setActiveIDs(baseLayers).setCurrentID(baseLayers[0]);
+            map.addControl(L.control.gmxLayers(blm));
+        });
+        blm.on('baselayerchange', function(ev) {
+            var id = ev.baseLayer.id;
+            if (id === 'slope' || id === 'aspect') {
+                map.setZoom(9);
+            }
+        });
+        
+	</script>
+</body>
+</html>

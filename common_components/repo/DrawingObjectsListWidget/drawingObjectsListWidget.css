@@ -1,0 +1,15 @@
+.drawingObjectsListWidget { min-width: 230px; }
+
+.drawingObjectsListWidget-noFeatures { width: 100%; text-align: center; }
+
+.drawingObjectsListNode {}
+.drawingObjectsListNode_last { margin-bottom: 0; }
+.drawingObjectsListNode .gmx-table { width: 100%; }
+.drawingObjectsListNode-titleCell { width: 100%; padding: 0 5px; }
+
+.drawingObjectsListNode-iconContainer { width: 16px; }
+
+.drawingObjectsListNode-icon { color: hsl(0, 0%, 35%); }
+.drawingObjectsListNode-icon, .drawingObjectsListNode-info { cursor: pointer; }
+.drawingObjectsListNode-icon_inactive { opacity: .35; }
+.drawingObjectsListNode-icon_hidable {}

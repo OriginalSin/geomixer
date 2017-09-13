@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Leaflet debug page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<!--
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@0.7.7/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@0.7.7/dist/leaflet.js"></script>
+-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin=""></script>
+
+	<link rel="stylesheet" href="../dist/css/gmxControls.css" />
+	<script src="../dist/gmxControls-src.js"></script>
+    <style>
+        html, body, #map {
+            height: 100%;
+            margin: 0px;
+        }
+		body>svg {
+			display: none;
+		}
+    </style>
+
+</head>
+<body>
+<svg/>
+	<div id="map"></div>
+	<script type="text/javascript">
+		var map = L.map('map', {
+			svgSprite: '../dist/css/img/svg-symbols.svg',
+			attributionControl: false,
+			center: [55.726456, 37.760009],
+			zoom: 9
+		});
+		var osm = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+				maxZoom: 18,
+				attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'
+			}).addTo(map)
+		var lControl = L.control.layers({
+			'OSM': osm
+		}, {
+		}, {collapsed: false}).addTo(map);
+
+		var svg = document.getElementsByTagName('svg')[0];
+		var responseText = svg.outerHTML,
+			re = /id="([^"]*)"/ig,
+			arr;
+
+		while ((arr = re.exec(responseText)) !== null) {
+			if (arr[1] !== 'clip-path') {
+				map.addControl(L.control.gmxIcon({
+					id: arr[1],
+					title: 'Иконка: ' + arr[0]
+				}));
+			}
+		}
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+.leaflet-gmx-icon-group {
+    clear: none;
+    margin-left: 0px;
+    cursor: pointer;
+}
+.icons-vertical {
+    display: block;
+    position: absolute;
+    z-index: -100;
+}
+
+.leaflet-gmx-icon-group-horizontal div {
+    float: left !important;
+    clear: none !important;
+}
+.leaflet-gmx-icon-group-vertical {
+    position: relative;
+}
+.leaflet-gmx-icon-group-vertical div {
+    margin-bottom: 4px;
+    clear: both;
+}
+
+.leaflet-gmx-icon-group-vertical .triangle {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    margin-left: 4px;
+    width: 8px;
+    height: 8px;
+    z-index: 10;
+    pointer-events: none;
+    background-position: -12px 116px;
+}
+.leaflet-gmx-icon-group-vertical .triangle-active {
+    background-position: -12px 84px;
+}
+.leaflet-gmx-icon-groupSvg {
+	border-radius: 4px;
+	box-shadow: 3px 3px 4.7px 0.3px rgba(0, 0, 0, 0.24);
+}
+.triangleSvg {
+    z-index: 10;
+    position: absolute;
+    top: 9px;
+    right: -1px;
+    pointer-events: none;
+}
+.triangleSvg .svgIcon {
+	width: 24px;
+    height: 24px;
+}
+.triangleSvg.triangle-active {
+	fill: #f57c00;
+}
+.leaflet-gmx-icon-group-maximum {
+	box-shadow: none;
+}

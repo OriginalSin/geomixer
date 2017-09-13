@@ -1,0 +1,39 @@
+﻿.geobuff-container {
+    margin: 10px;
+}
+
+.geobuff-params-container td {
+    vertical-align: middle;
+}
+
+.geobuff-size, .geobuff-precision {
+    width: 60px;
+}
+
+.geobuff-geom-container {
+    margin: 6px 0px;
+}
+
+.geobuff-geom-container td {
+    vertical-align: middle;
+}
+
+.geobuff-feature-checkbox {
+    margin: 2px 0px;
+}
+
+.geobuff-calculate, .geobuff-save, .geobuff-export-shp {
+    margin-right: 10px;
+}
+
+.geobuff-precision-label {
+    border-bottom: 1px dotted #808080;
+}
+
+.geobuff-progressbar.ui-progressbar{
+    height: 1em;
+}
+
+.geobuff-progressbar .ui-progressbar-value {
+    background: grey;
+}

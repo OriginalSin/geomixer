@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GeoMixer Vector Layer Example</title>
+	<meta charset="utf-8" />
+    <style>
+    </style>
+
+	<link rel="stylesheet" href="main.css" />
+    
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone.js"></script>
+    
+    <script src="../../Thorax/thorax.js"></script>
+    
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet-src.js"></script>
+    
+    <script src="../LayersTree.js"></script>
+    <script src="LayersTreeView.js"></script>
+    <script src="TreeExample.js"></script>
+    <script>
+        $(function() {
+            var layersTree = new nsGmx.LayersTreeNode({content: treeExample.Result});
+            var layersTreeView = new LayersTreeNodeView({model: layersTree});
+            layersTreeView.appendTo($('#tree-placeholder'));
+            
+            var state;
+            $('.saveButton').click(function() {
+                state = layersTree.saveState();
+                console.log(state);
+            })
+            
+            $('.loadButton').click(function() {
+                state && layersTree.loadState(state);
+            })
+            
+            layersTree.on('childChange', function(node) {
+                console.log(node.get('properties').title, node.get('visible'), node.get('depth'));
+            })
+            
+            layersTree.eachNode(function(node) {
+                console.log(node.getBounds(), node.getLatLngBounds());
+            })
+            
+            console.log(layersTree.select(function(node) {
+                    return node.get('properties').title.indexOf('амят') !== -1;
+                }).map(function(node) {
+                    return node.get('properties');
+                })
+            )
+        })
+    </script>    
+</head>
+<body>
+    <button class="saveButton">Save</button>
+    <button class="loadButton">Load</button>
+	<div id="tree-placeholder"></div>    
+</body>
+</html>

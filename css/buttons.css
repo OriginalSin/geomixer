@@ -1,0 +1,20 @@
+input[type=image]
+{
+	cursor: pointer;
+}
+.buttonLink
+{
+	text-decoration: underline;
+	cursor: pointer;
+	font-size: 12px;
+}
+
+.buttonLink:hover
+{
+	color: #fc830b;
+}
+
+span.buttonLinkHover
+{
+	color: #fc830b;
+}

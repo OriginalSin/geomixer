@@ -1,0 +1,23 @@
+.leaflet-gmx-logo {
+    background-image: url("img/logo_footer.png");
+}
+.leaflet-gmx-logo-color {
+    background-image: url("img/logo_footer_color.png");
+}
+.leaflet-control.leaflet-gmx-logo,
+.leaflet-control.leaflet-gmx-logo-color {
+    position: absolute;
+    bottom: -8px;
+    height: 16px;
+    margin-left: 48%;
+    margin-left: calc(50% - 50px);
+    margin-left: -webkit-calc(50% - 50px); 
+    margin-left: -moz-calc(50% - 50px); 
+    width: 100px;
+    cursor: pointer;
+    z-index: 100;
+}
+.leaflet-gmx-logo.leaflet-gmx-logo-shift,
+.leaflet-gmx-logo-color.leaflet-gmx-logo-color-shift {
+    bottom: 12px;
+}

@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>WWF Alarm Plugin Example</title>
+    <meta charset="utf-8" />
+    <style>
+        html, body, #map {
+            height: 100%;
+            width: 100%;
+            margin: 0px;
+        }
+        #map.leaflet-container {
+            background-color: black;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+</head>
+<body>
+    <div id="map"></div>
+ 
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet-src.js"></script>
+    <script src="http://maps.kosmosnimki.ru/apiv2/leaflet-geomixer-src.js?key=U92596WMIH"></script>
+    <script src="../Leaflet.WWFAlarm.js"></script>
+    <script>
+        var API_KEY = ''; // <- your GeoMixer Direct API key
+        var map = L.map('map').setView([47.077740, 135.43567], 12);
+        
+        var alarm = new L.WWFAlarm('C028E31745494A0ABFE3AA71EDC2C3CA', '1D116AC56D694C0B8CDCA87C06D1961A', {zIndex: 1, apiKey: API_KEY});
+        alarm.setDateInterval(1, 365).addTo(map);
+
+        var osm = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+            maxZoom: 18,
+            attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+            zIndex: 0
+        });
+        
+        L.control.layers({}, {OSM: osm}, {autoZIndex: false}).addTo(map);
+    </script>
+</body>
+</html>

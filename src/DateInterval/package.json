@@ -1,0 +1,19 @@
+{
+  "name": "gmx-date-interval",
+  "version": "0.0.1",
+  "description": "date interval model",
+  "main": "DateInterval.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ScanEx/DateInterval.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ScanEx/DateInterval/issues"
+  },
+  "homepage": "https://github.com/ScanEx/DateInterval#readme"
+}

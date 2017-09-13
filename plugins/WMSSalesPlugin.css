@@ -1,0 +1,45 @@
+﻿.wmsSales-scenelist
+{
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+.wmsSales-basefolder
+{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.wmsSales-select
+{
+    width: 90%;
+    margin-bottom: 10px;
+}
+
+.wmsSales-coveragelayer
+{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.wmsSales-genbutton
+{
+    padding: 3px;
+    margin: 2px 0px;
+}
+
+.wmsSales-name-input
+{
+    width: 200px;
+}
+
+.wmsSales-rcProperties td
+{
+    padding: 2px;
+}
+
+.wmsSales-rcProperties
+{
+    margin-top: 20px;
+}

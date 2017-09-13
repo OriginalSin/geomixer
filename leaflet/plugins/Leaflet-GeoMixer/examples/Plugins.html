@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>GeoMixer Vector Layer Example</title>
+	<meta charset="utf-8" />
+    <style>
+        html, body, #map {
+            height: 100%;
+            margin: 0px;
+        }
+        
+        #infoPanel {
+            position: absolute;
+			right: 11px;
+			top: 11px;
+            text-align: center;
+			z-index: 1;
+        }
+        
+        #info {
+			background-color: #ffffff;
+			border-radius: 5px;
+            box-shadow: 0 1px 7px rgba(0,0,0,0.65);
+            padding: 10px;
+            max-width: 680px;
+            display: inline-block;
+            text-align: left;
+        }
+    </style>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+	<link rel="stylesheet" href="http://leaflet.github.io/Leaflet.draw/leaflet.draw.css" />
+</head>
+<body>
+	<div id="map"></div>
+    
+    <div id="infoPanel">
+        <div id="info">
+                Rasters from GeoMixer are integrated into Leaflet map along with several plugins:
+                <ul>
+                    <li><a href="https://github.com/Leaflet/Leaflet.draw" target="_blank">Leaflet.Draw</a> to place markers
+                    <li><a href="https://github.com/mlevans/leaflet-hash" target="_blank">Leaflet-hash</a> to store position in URL and
+                    <li><a href="https://github.com/jseppi/Leaflet.MakiMarkers" target="_blank">Leaflet.MakiMarkers</a> to use 
+                        icons from MapBox <a href="https://www.mapbox.com/maki/" target="_blank">Maki</a> icon collection.
+                </ul>
+        </div>
+    </div>
+ 
+    <!-- Leaflet plugins -->
+	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet-src.js"></script>
+	<script src="http://mlevans.github.io/leaflet-hash/javascripts/leaflet-hash.js"></script>
+	<script src="http://leaflet.github.io/Leaflet.draw/leaflet.draw.js"></script>
+	<script src="https://rawgithub.com/jseppi/Leaflet.MakiMarkers/master/Leaflet.MakiMarkers.js"></script>
+    
+	<script src="../build/leaflet-geomixer-dev.js?key=U92596WMIH"></script>
+	<script>
+		var map = L.map('map').setView([55.271, 108.715], 8);
+		var osm = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+			maxZoom: 18,
+			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'
+		}).addTo(map);
+        
+        //Leaflet Hash plugin
+        new L.Hash(map);
+        
+        var rocketIcon = L.MakiMarkers.icon({
+            icon: "waste-basket",
+            color: "#b0b",
+            size: "m"
+        });
+        
+        //Leaflet.Draw plugin
+        var drawControl = new L.Control.Draw({
+            draw: {
+                polygon: null, 
+                polyline: null,
+                circle: null,
+                rectangle: null,
+                marker: {icon: rocketIcon}
+            }
+        });
+		map.addControl(drawControl);
+        
+        map.on('draw:created', function (e) {
+			drawnItems.addLayer(e.layer);
+		});
+        
+        var drawnItems = new L.FeatureGroup();
+		map.addLayer(drawnItems);
+        
+        //Leaflet-Geomixer plugin
+        L.gmx.loadMap('AZR6A', {leafletMap: map});
+	</script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+.myOddGrey {
+    background-color: white !important;
+}
+
+#left_repMenuExID {
+    margin-bottom: 4px !important;
+}
+
+.myOddWhite {
+    background-color: white !important;
+}
+
+.disable-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#repSum {
+    float: left;
+}
+
+#repBottomArea {
+    float: right;
+    font-size: 12px;
+    padding-bottom: 7px;
+    padding-right: 7px;
+    text-align: right;
+    width: 100%;
+    padding-top: 5px;
+    display: block;
+}
+
+#download_csv {
+    float: right;
+    padding-left: 10px;
+}
+
+#download_excel {
+    float: right;
+    padding-left: 10px;
+}
+
+.floatRight_FFbug {
+    float: right;
+}
+
+.buttonLink_important:hover {
+    color: #fc830b !important;
+}
+
+#agroReportsTableHeader{
+    border-top: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+}
+
+#agroReportsTableHeader td{
+	background-color: white;
+	padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#agroReportsTableHeader table tr td{
+    border-left: 1px solid #dedede;
+}
+
+#agroReportsTableBody td {
+    padding: 0px 5px 0px 5px;
+    border: 0px;
+    border-right: 1px solid #dedede;
+    font-size: 12px;
+    font-weight: normal;
+	text-overflow: ellipsis;
+    word-wrap: break-word;
+    white-space: nowrap;
+}
+
+#leftPanelHeader{
+	top:auto;
+	top:initial;
+}

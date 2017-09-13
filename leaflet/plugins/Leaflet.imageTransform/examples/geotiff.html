@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Leaflet Image Transform Interactive Example</title>
+	<meta charset="utf-8" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+    <link rel="stylesheet" href="css/examples.css" />
+    
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
+
+	<script data-main="external/GeotiffParser" src="external/lib/require.js"></script>
+<!--
+	<script src="external/leaflet.draw.js"></script>
+	
+    <script src="../src/L.ImageTransform.js"></script>
+-->
+</head>
+<body>
+	<div id="map"></div>
+
+	<script>
+		var osmUrl = 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
+			osm = new L.TileLayer(osmUrl, {maxZoom: 18}),
+			map = new L.Map('map', {layers: [osm], center: new L.LatLng(56, 137.23), zoom: 9});
+
+		/* Add a new Layer into the canvas 
+		   And define the callback function canvacFunction called when map is paned rotated or zoomed
+		 */
+		function addCanvasLayer(parser, bbox)
+		{	
+			// This is the projection of the view 
+			// we need to project or Geotiff in this projection (if needed)
+console.log('dddd', parser, bbox);
+			// var projOfView = map.getView().getProjection().getCode();
+			
+			var canvasFunction = function(extent, resolution, pixelRatio, size, projection) {
+
+				// Issue with OL3 v3.0.0
+				// Part of this code is found in the OpenLayers 3 Book but 
+				// seems to have some bug in it rotation is not well handled
+				// 
+				var canvas = document.createElement('canvas');
+				var context = canvas.getContext('2d');
+				var canvasWidth = size[0], canvasHeight = size[1];
+				canvas.setAttribute('width', canvasWidth);
+				canvas.setAttribute('height', canvasHeight);
+				/*
+					console.log("extent :" , extent);
+					console.log("resolution :" , resolution);
+					console.log("pixelRatio :" , pixelRatio);
+					console.log("size :", size);
+					console.log("projection :",  projection);
+				*/
+
+				// Canvas extent is different than map extent, so compute delta between 
+				// left-top of map and canvas extent.
+				var mapExtent = map.getView().calculateExtent(map.getSize())
+				//console.log("ViewExtent :",  mapExtent);
+				
+				var canvasOrigin = map.getPixelFromCoordinate([extent[0], extent[3]]);
+				var mapOrigin = map.getPixelFromCoordinate([mapExtent[0], mapExtent[3]]);
+				var delta = [mapOrigin[0]-canvasOrigin[0], mapOrigin[1]-canvasOrigin[1]]
+				
+				drawBBox(projOfView, bbox,delta,context)
+				drawImage(parser,projOfView, bbox,delta,context)
+				return canvas;
+			};
+
+			// Define the canvas Layer ad add it to the map 
+			var canvasLayer = new ol.layer.Image({
+				source: new ol.source.ImageCanvas({
+					canvasFunction: canvasFunction,
+					projection: projOfView
+				})
+			});
+
+			map.addLayer(canvasLayer);
+			
+		}	
+
+		function addGeotiffLayer(data)
+		{
+			var parser = new GeotiffParser();
+
+			// parseHeader to read TIff / Geotiff parameters
+			parser.parseHeader(data);
+		
+			// Write some Geotiff parameter on the console for debug 
+			parser.consoleTiffProperty();
+				
+			// If a GeoTiff retrieve the BBOX 
+			if (!parser.isGeotiff())
+				throw TypeError("Not a Geotiff data");
+			
+			// Get the reference system 
+			// Limit the reference system to projection handled by OL3
+			
+			var pCRS = parser.getCRSCode();
+			if (pCRS != 4326 && pCRS!=3857 && pCRS!=102113 /*old 3857 */)
+				throw TypeError("This reference system is not handled : use proj4js in conjunction to OL3 and GeotiffParser" +  pCRS);
+			
+			
+			
+			// Get the BBOX of the Geotiff 
+			var ul=  parser.ImageToPCS(0,0);
+			var ur=  parser.ImageToPCS(parser.imageWidth,0);
+			var ll=  parser.ImageToPCS(0,parser.imageLength);
+			var lr=  parser.ImageToPCS(parser.imageWidth,parser.imageLength);
+			if (ul[0]!=1  || ur[0]!=1 || ll[0]!=1 || lr[0]!=1) 
+			{
+				throw TypeError("BBox error");
+			}
+			
+			// Create the BBox structure and call the display in a Canvas Function
+			var  lcoordinates=[];
+			lcoordinates.push(ul.splice(1,2));
+			lcoordinates.push(ur.splice(1,2));
+			lcoordinates.push(lr.splice(1,2));
+			lcoordinates.push(ll.splice(1,2));
+			
+			var projstring ='EPSG:' + pCRS.toString();
+		
+			var bbox = {
+				'WKID': projstring,
+				'coord': lcoordinates,
+			};
+			var imageCanvas = parser.toCanvas(null, 0, 0, 255, 255);
+			// var imageCanvas = parser.toCanvas(null, 0, 0, parser.imageWidth, parser.imageLength);
+			document.body.appendChild(imageCanvas);
+			var anchors = [[56.344192, 136.59558], [56.344192, 137.8782], [55.613245, 137.8782], [55.613245, 136.59558]];
+			//addCanvasLayer(parser, bbox); 				
+		}
+		var loadFile = function() {
+			var files = document.getElementById( "tiff-file" ).files;
+			var file = files[0];
+
+			if (files.length < 1 || file.type !== 'image/tiff') {
+				return;
+			}
+
+			var reader = new FileReader();
+
+			reader.onload = function(e) {
+
+				addGeotiffLayer(e.target.result);
+		
+			};
+
+			reader.readAsArrayBuffer( file );
+		}
+/*
+		var anchors = [[56.344192, 136.59558], [56.344192, 137.8782], [55.613245, 137.8782], [55.613245, 136.59558]];
+        var clipCoords = [[56.301281, 136.90579],[56.150009, 137.83902],[55.639533, 137.53169],[55.788635, 136.60979]];
+        var image = L.imageTransform('img/image.jpg', anchors, { opacity: 0.5, clip: clipCoords, disableSetClip: false }).addTo(map);
+        var externalPolygon = L.polygon(anchors, {fill: false}).addTo(map);
+        
+        var clipPolygon = L.polygon(clipCoords, {fill: false, color: 'red'}).addTo(map);
+        if (!image.options.disableSetClip) {
+            clipPolygon.editing.enable();
+            
+            clipPolygon.on('edit', function() {
+                image.setClip(clipPolygon.getLatLngs());
+            });
+        }
+
+        var updateAnchors = function() {
+            
+            var anchors = anchorMarkers.map(function(marker){ return marker.getLatLng(); })
+            image.setAnchors(anchors);
+            externalPolygon.setLatLngs(anchors);
+            clipPolygon.setLatLngs(image.getClip());
+            
+            //TODO: support setLatLngs() Leaflet.Draw
+            //HACK: update editing points
+            if (!image.options.disableSetClip) {
+                clipPolygon.editing.disable();
+                clipPolygon.editing.enable();
+            }
+        }
+        
+        var anchorMarkers = anchors.map(function(anchor) {
+            return L.marker(anchor, {draggable: true}).addTo(map).on('drag', updateAnchors);
+        })
+*/
+	</script>
+    
+    <div class="outer-info">
+		<input type="file" name="tiff-file" id="tiff-file" accept="image/tiff" required onchange="loadFile();" />
+    </div>
+    
+    <a href="https://github.com/ScanEx/Leaflet.imageTransform" target="_blank">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png">
+    </a>
+</body>
+</html>

@@ -1,0 +1,17 @@
+.medved-dist-calendar, .medved-dist-download {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.medved-dist-header {
+    margin-bottom: 10px;
+}
+
+.medved-dist-cell-date {
+    width: 100px;
+    text-align: center;
+}
+
+.medved-dist-cell-len {
+    text-align: center;
+}

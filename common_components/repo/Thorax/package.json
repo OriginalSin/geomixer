@@ -1,0 +1,6 @@
+{
+  "name": "gmx-Thorax",
+  "devDependencies": {
+    "gulp": "3.8.10"
+  }
+}

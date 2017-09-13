@@ -1,0 +1,1 @@
+browserify index.js -o dist/turf-geobuffer.js -s GeoBuffer

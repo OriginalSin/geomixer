@@ -1,0 +1,222 @@
+
+.CalendarWidget-inputCell {
+  background-color: #fff;
+  padding: 0px 1px;
+  text-align: center;
+}
+
+.CalendarWidget-timeicon {
+    width: 16px;
+    border-top-left-radius: 5px;
+    border-bottom-lesft-radius: 5px;
+}
+
+.CalendarWidget-space {
+    width: 10px;
+}
+
+.CalendarWidget-timeInput.error,
+.CalendarWidget-inputCell-inputTimeMiddle.error {
+      /*background-color: red;*/
+      color: red;
+}
+
+.CalendarWidget-timeBegin,
+.CalendarWidget-timeEnd {
+  width: 20px;
+  text-align: center;
+}
+
+.calendar-outside select {
+  font-size: 1.1em !important;
+  border: 0;
+  background-color: #FFF;
+}
+
+.calendar-outside .ui-datepicker-header {
+    border-bottom: 1px solid grey;
+}
+
+.calendar-outside .ui-datepicker-prev, .ui-datepicker-next {
+    height: 28px !important;
+}
+
+.calendar-outside .ui-datepicker-prev span, .ui-datepicker-next span {
+    background-image: none !important;
+}
+
+.calendar-outside .ui-datepicker-prev span.ui-icon {
+    display: block;
+    text-indent: 0;
+    overflow: hidden;
+    background-repeat: no-repeat;
+}
+
+.calendar-outside .ui-datepicker-prev span:before {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    margin-left: .2em;
+    content: '\';
+}
+
+.calendar-outside .ui-datepicker-next span.ui-icon {
+    display: block;
+    text-indent: 0;
+    overflow: hidden;
+    background-repeat: no-repeat;
+}
+
+.calendar-outside .ui-datepicker-next span:before {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    margin-left: .2em;
+    content: '\';
+}
+
+.calendar-outside .time-container {
+  position: absolute;
+  display: block;
+  width: 208.8px;
+  bottom: 30px;
+  height: 15px;
+  margin-bottom: 8px;
+}
+
+.calendar-outside .time-picker-container {
+  display: block;
+  margin: auto;
+  width: 80px;
+  height: 15px;
+}
+
+.calendar-outside .time-picker-label {
+  color: #808080;
+  margin-right: 8px;
+}
+
+.calendar-outside .ui-dialog-titlebar.ui-widget-header {
+  display: none;
+}
+
+.calendar-outside .ui-datepicker {
+  border: none;
+  margin-bottom: 12px;
+}
+
+.calendar-outside .ui-datepicker-prev,
+.calendar-outside .ui-datepicker-next {
+    cursor: pointer;
+}
+
+.calendar-outside .ui-datepicker table {
+  width: 100%;
+}
+
+.calendar-outside .ui-icon ui-icon-circle-triangle-e {
+  background-image: ;
+}
+
+.calendar-outside .ui-datepicker tbody td {
+  text-align: center;
+  padding: 0;
+}
+
+.calendar-outside .ui-datepicker td span,
+.calendar-outside .ui-datepicker td a {
+  display: inline-block;
+  text-align: center;
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
+}
+
+/*названия дней недели*/
+.calendar-outside .ui-datepicker-calendar th {
+  color: #C0C0C0;
+}
+
+.calendar-outside .ui-datepicker-calendar tr {
+  color: #808080;
+}
+
+.calendar-outside .ui-datepicker-month,
+.calendar-outside .ui-datepicker-year,
+.calendar-outside .ui-datepicker-calendar a.ui-state-default {
+  color: #808080;
+}
+
+/*выходные*/
+
+.calendar-outside .ui-datepicker-week-end a.ui-state-default {
+  color: #d54848;
+}
+
+.calendar-outside .ui-state-default.ui-state-active {
+  padding: 0;
+  border-radius: 50%;
+  border: 2px solid #1471bb;
+}
+
+.calendar-outside .ui-state-default.ui-state-highlight {
+  padding: 0;
+  border-radius: 50%;
+  background-color: #e2e2e2;
+}
+
+.calendar-outside .calendar-button-container {
+  position: absolute;
+  display: block;
+  width: 208.8px;
+  bottom: 30px;
+  height: 26px;
+  bottom: 4px;
+}
+
+.calendar-outside .calendar-button {
+  cursor: pointer;
+  position: absolute;
+  width: 150px;
+  text-align: center;
+  font-weight: bold;
+  padding: 4px;
+  margin-left: 25.4px;
+  bottom: 4px;
+}
+
+.calendar-outside .createdateinterval-button,
+.calendar-outside .resetdateinterval-button {
+  color: #1471bb;
+  text-decoration: underline;
+}
+
+.calendar-outside .selectdateinterval-button {
+  border-radius: 10px;
+  background-color: #1471bb;
+  color: white;
+}
+
+.calendar-outside .calendar-button.disabled {
+  background-color: #cfcfcf;
+  pointer-events: none;
+  cursor: default;
+}

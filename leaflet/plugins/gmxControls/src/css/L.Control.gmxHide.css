@@ -1,0 +1,22 @@
+.leaflet-gmx-icon-hide {
+    background-position: -592px 1px;
+    margin-right: 10px;
+    background-image: url("img/gmxSprite.png");
+}
+.leaflet-left .leaflet-gmx-icon-hide.leaflet-control {
+    margin-left: 12px;
+}
+.leaflet-left .leaflet-gmx-iconSvg-hide.leaflet-control {
+    margin-left: 12px;
+}
+
+.leaflet-gmx-icon-hide:hover {
+    background-color: rgba(154, 154, 154, 1);
+}
+
+.leaflet-control-container .leaflet-control.leaflet-control-gmx-hidden {
+    display: none;
+}
+.leaflet-gmx-iconSvg-hide {
+    margin-right: 10px;
+}

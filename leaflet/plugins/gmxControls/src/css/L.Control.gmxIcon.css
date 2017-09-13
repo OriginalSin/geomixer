@@ -1,0 +1,82 @@
+.leaflet-gmx-icons {
+    margin-left: 50px;
+}
+.leaflet-gmx-icon-sprite {
+    background-image: url("img/gmxSprite.png");
+}
+
+.leaflet-left .leaflet-gmx-icon.leaflet-control {
+    margin-left: 4px;
+}
+.leaflet-gmx-icon-text {
+    width: auto;
+}
+.leaflet-gmx-icon-img {
+    width: 32px;
+}
+.leaflet-gmx-icon {
+    background-color: rgba(154, 154, 154, 0.7);
+    height: 32px;
+    border-radius: 4px;
+    clear: none;
+    cursor: pointer;
+    display: block;
+    float: left;
+    margin-left: 4px;
+    position: relative;
+}
+.leaflet-gmx-icon-active, .leaflet-gmx-icon:hover {
+    background-color: rgba(154, 154, 154, 1);
+}
+.leaflet-gmx-icon > img {
+    max-width: 32px !important;
+    position: absolute !important;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    right: 0;
+    top: 0;
+}
+.leaflet-gmx-icon > span {
+    color: white;
+    display: block;
+    font-family: tahoma;
+    margin: 6px 6px 0;
+}
+.leaflet-gmx-icon > img ~ span {
+    margin-left: 36px;
+}
+.leaflet-gmx-iconSvg {
+	text-align: center;
+    height: 32px;
+
+	border-radius: 4px;
+	background-color: rgb(255, 255, 255);
+	box-shadow: 0px 3px 4.7px 0.3px rgba(0, 0, 0, 0.24);
+	fill: #757575;
+	
+    clear: none;
+    cursor: pointer;
+    display: block;
+    float: left;
+    margin-left: 4px;
+    position: relative;
+}
+.leaflet-gmx-iconSvg svg {
+    height: 24px;
+    width: 24px;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-top: 4px;
+	pointer-events: none;
+}
+.leaflet-gmx-iconSvg:hover {
+	background-color: #eee;
+}
+.leaflet-gmx-iconSvg-active {
+	fill: #f57c00;
+}
+
+.leaflet-left .leaflet-gmx-iconSvg.leaflet-control {
+    margin-left: 4px;
+}

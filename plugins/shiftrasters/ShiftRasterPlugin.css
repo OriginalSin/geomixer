@@ -1,0 +1,55 @@
+﻿.shift-rasters-title {
+    text-align: center;
+    margin: 3px;
+}
+
+.shift-rasters-container {
+    position: relative;
+}
+
+.shift-rasters-input {
+    width: 35px;
+}
+
+.shift-rasters-btn {
+    width: 55px;
+    margin: 0px 3px;
+}
+
+.shift-rasters-label {
+    margin-left: 2px;
+}
+
+.shift-rasters-slider {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    margin-top: 7px;
+}
+
+/* для UI в левой панели отдельно настраиваем размеры */
+.workCanvas .shift-rasters-input {
+    width: 30px;
+}
+
+.workCanvas .shift-rasters-slider {
+    display: inline-block;
+    position: absolute;
+    right: 7px;
+    margin-top: 7px;
+}
+
+.shift-rasters-properties {
+    margin: 8px 4px;
+    display: block;
+}
+
+.shift-rasters-properties input
+{
+    margin-right: 3px;
+}
+
+.shift-rasters-properties *
+{
+    vertical-align: middle;
+}

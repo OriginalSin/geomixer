@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GmxControls Leaflet Quick Start Guide Example</title>
+	<meta charset="utf-8" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@0.7.7/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@0.7.7/dist/leaflet.js"></script>
+<!--
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin=""/>
+   <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin=""></script>
+-->
+
+	<script src="http://scanex.github.io/Leaflet.gmxBaseLayersManager/src/gmxBaseLayersManager.js"></script>
+
+    <link rel="stylesheet" href="../src/css/L.Control.gmxLayers.css" />
+	<script src="../src/js/L.Control.gmxLayers.js"></script>
+
+    <style>
+        html, body, #map {
+            height: 100%;
+            width: 100%;
+            margin: 0px;
+        }
+        
+        #infoPanel {
+            position: absolute;
+			left: 100px;
+			right: 100px;
+			top: 21px;
+            text-align: center;
+			z-index: 1000;
+        }
+        
+        #info {
+			background-color: #ffffff;
+			border-radius: 5px;
+            box-shadow: 0 1px 7px rgba(0,0,0,0.65);
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+	<div id="map"></div>
+    <div id="infoPanel">
+        <span id="info">
+                Add L.control.gmxLayers to map (you can change visibility layer with buttons <a id="hideMe" href="javascript:void();">hide</a> or <a id="showMe" href="javascript:void();">show</a> or by click on layer title in control)
+        </span>
+    </div>
+
+	<script>
+
+		var map = new L.Map('map', {layers: [], center: new L.LatLng(50, 20), zoom: 3});
+
+		var osm = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+			maxZoom: 18,
+			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'
+		});
+        
+		var baseLayers = ['OSM'],
+			currentID = baseLayers[0];
+
+		map.gmxBaseLayersManager.add(currentID, {layers: [osm]});
+		
+		map.gmxBaseLayersManager.setActiveIDs(baseLayers).setCurrentID(currentID);
+        var myLayersControl = L.control.gmxLayers(map.gmxBaseLayersManager);
+        myLayersControl.addTo(map);
+        myLayersControl.addOverlay(L.tileLayer('http://{s}tilecart.kosmosnimki.ru/bw/{z}/{x}/{y}.png', {
+			maxZoom: 22,
+			maxNativeZoom: 18
+		}), 'sputnik');
+        
+		document.getElementById("showMe").onclick = function() {
+            myLayersControl.setActiveBaseLayer('OSM');
+            return false;
+        };
+		document.getElementById("hideMe").onclick = function() {
+            myLayersControl.unSetActiveBaseLayer('OSM');
+            return false;
+        };
+	</script>
+</body>
+</html>

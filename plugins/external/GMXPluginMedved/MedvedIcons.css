@@ -1,0 +1,62 @@
+#MedvedIconsControl {
+    background-color: rgba(154, 154, 154, 0.7);
+    border-radius: 4px;
+    left: 4px;
+    margin-right: 4px;
+    right: -4px;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+#MedvedIconsControl div {
+    width: 100%;
+    background-color: initial;
+    margin-left: initial !important;
+    background-image: none;
+}
+
+#MedvedIconsControl div:hover, .leaflet-gmx-icon-active {
+    background-color: rgba(100, 100, 100, 0.7) !important;
+}
+
+#MedvedIconsControl div img {
+    left: 4px;
+    right: initial !important;
+}
+#MedvedIconsOpen {
+    text-align: center;
+}
+
+.medved-attrs-table-row {
+    display: block;
+    font-size: 12px;
+    margin: 4px 0 2px 3px;
+    overflow-x: hidden;
+    white-space: nowrap;
+    width: 258px;
+}
+
+.medved-attrs-table-active-checkbox {
+    margin-right: 3px;
+    float: left;
+}
+
+.medved-buttonLink {
+    margin-left: 20px;
+}
+
+#birds {
+    width: 30px !important;
+}
+#birds img {
+    left: 0px !important;
+    right: initial !important;
+}
+
+.medved-result {
+    border: 2px inset;
+    border-radius: 4px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+    padding: 2px;
+}

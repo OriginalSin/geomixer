@@ -1,0 +1,17 @@
+﻿require('../src/js/gmxPosition.js');
+require('../src/js/gmxControlsManager.js');
+require('../src/js/L.Control.gmxIcon.js');
+require('../src/js/L.Control.gmxIconGroup.js');
+require('../src/js/L.Control.gmxDrawing.js');
+require('../src/locale/L.Control.gmxDrawing.locale.ru.js');
+require('../src/locale/L.Control.gmxDrawing.locale.en.js');
+require('../src/js/L.Control.gmxCenter.js');
+require('../src/js/L.Control.gmxHide.js');
+require('../src/js/L.Control.gmxLayers.js');
+require('../src/js/L.Control.gmxLocation.js');
+require('../src/js/L.Control.gmxCopyright.js');
+require('../src/js/L.Control.gmxZoom.js');
+require('../src/js/L.Control.gmxBottom.js');
+require('../src/js/L.Control.gmxLogo.js');
+require('../src/js/L.Control.gmxSidebar.js');
+require('../src/js/L.Control.gmxLoaderStatus.js');

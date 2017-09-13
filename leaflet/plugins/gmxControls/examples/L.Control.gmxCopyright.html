@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GmxControls Leaflet Quick Start Guide Example</title>
+	<meta charset="utf-8" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@0.7.7/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@0.7.7/dist/leaflet.js"></script>
+-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin=""></script>
+
+    <link rel="stylesheet" href="../src/css/L.Control.gmxBottom.css" />
+    <script src="../src/js/gmxPosition.js"></script>
+	<script src="../src/js/L.Control.gmxBottom.js"></script>
+	<script src="http://scanex.github.io/Leaflet-GeoMixer/build/leaflet-geomixer-dev.js?key=U92596WMIH"></script>
+    <link rel="stylesheet" href="../src/css/L.Control.gmxCopyright.css" />
+	<script src="../src/js/L.Control.gmxCopyright.js"></script>
+
+    <style>
+        html, body, #map {
+            height: 100%;
+            width: 100%;
+            margin: 0px;
+        }
+        #infoPanel {
+            position: absolute;
+			left: 0px;
+			right: 0px;
+			top: 21px;
+            text-align: center;
+			z-index: 1;
+        }
+        
+        #info {
+			background-color: #ffffff;
+			border-radius: 5px;
+            box-shadow: 0 1px 7px rgba(0,0,0,0.65);
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+	<div id="map"></div>
+    <div id="infoPanel">
+        <span id="info">
+                Add L.control.gmxCopyright to map - layer Copyrights array for zoom interval and bounds
+        </span>
+    </div>
+
+	<script>
+		var map = new L.Map('map', {layers: [], center: new L.LatLng(50, 20), attributionControl: false, zoomControl: false, zoom: 6});
+
+        map.addControl(L.control.gmxBottom());
+        map.addControl(L.control.gmxCopyright({type: 'window'}));  // default options = {position: 'bottomleft'}
+
+        L.gmx.loadLayers([
+            {mapID: '1D30C72D02914C5FB90D1D448159CAB6', layerID: 'C9458F2DCB754CEEACC54216C7D1EB0A'}
+        ]).then(function(satellite) {
+            L.setOptions(satellite, {
+                gmxCopyright: [
+                    { minZoom: 1, maxZoom: 5, attribution: "&copy; <a href='http://www.nasa.gov'>NASA</a>" }
+                    ,{ minZoom: 6, maxZoom: 13, attribution: "&copy; <a href='http://www.es-geo.com'>Earthstar Geographics</a>" }
+                    ,{ minZoom: 6, maxZoom: 14, attribution: "&copy; <a href='http://www.antrix.gov.in/'>ANTRIX</a>", bounds: [[9.9481201, 18.265291], [45.263671, 61.305477]] }
+                    ,{ minZoom: 9, maxZoom: 17, attribution: "&copy; <a href='http://www.geoeye.com'>GeoEye Inc.</a>" }
+                ]
+            });
+            satellite.addTo(map);
+        });
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+.stylelib-category-active {
+    background-color: #FAFAFE;
+}
+
+/*.stylelib-category-count {
+    float: right;
+    margin-right: 5px;
+}*/
+
+.stylelib-category-panel {
+    vertical-align: top;
+    position: relative;
+    width: 100px;
+    background: #539abc;
+}
+
+.stylelib-category-controls {
+    position: absolute;
+    bottom: 0px;
+}
+
+.stylelib-category-container {
+    width: 148px;
+    background: #539abc;
+    height: 340px;
+    overflow-y: auto;
+}
+
+.stylelib-category-container  > div{
+    width: 100%;
+    cursor: pointer;
+    padding: 4px 0px;
+    font-size: 11px;
+    font-family: Verdana;
+}
+
+.stylelib-category-container  span{
+    font-size: 11px;
+    font-family: Verdana;
+    color: white;
+    padding-left: 16px;
+    display: inline-block;
+}
+
+.stylelib-category-active span{
+    color: black;
+}
+
+.ui-tabs .ui-tabs-panel.stylelib-styles-container {
+    height: 320px;
+    overflow-y: auto;
+    padding-top: 10px;
+}
+
+.stylelib-main-table {
+    width: 100%;
+}
+
+.stylelib-style-container {
+    display: inline-block;
+    margin: 10px;
+    vertical-align: top;
+    text-align: center;
+}
+
+.stylelib-style-active {
+    border: 1px solid #8ac4df;
+    margin: 9px;
+    background: #e6eff3;
+}
+
+.stylelib-style-icon-container {
+    width: 52px;
+    height: 52px;
+    position: relative;
+    display: inline-block;
+    /*background-image: linear-gradient( -45deg, cyan, green );*/
+}
+
+.stylelib-style-title {
+    text-align: center;
+    font-family: Verdana;
+    font-size: 10px;
+    cursor: default;
+    max-width: 120px;
+}
+
+.stylelib-controls > span {
+    margin-right: 10px;
+}
+
+.stylelib-edit-title-container {
+    padding: 2px 12px 15px 0px;
+}
+
+.stylelib-edit-title {
+    width: 100%;
+    margin-top: 4px;
+}
+
+.stylelib-dialog {
+    border: solid 1px #8ac4df;
+}
+
+.stylelib-dialog.ui-dialog .ui-dialog-content {
+    margin: 0;
+}
+
+.stylelib-dialog .ui-widget-header {
+    background: none;
+    border: none;
+}
+
+.stylelib-dialog .ui-dialog-title {
+    color: black;
+    font-size: 12px;
+    font-family: Verdana;
+    font-weight: bold;
+    padding: 9px 3px;
+}
+
+.stylelib-dialog li.ui-state-default{
+    border: none;
+    background: none;
+    padding: 8px !important; 
+}
+
+.stylelib-dialog  li.ui-state-active{
+    background: #FAFAFE;    
+}
+
+.stylelib-dialog .ui-state-default > a{
+    color: white;
+    font-size: 11px;
+    font-family: Verdana;
+}
+
+.stylelib-dialog  .ui-state-active  > a{
+    color: black;
+}
+
+.stylelib-dialog .ui-tabs-nav {
+    background: #539abc;
+    padding: 0;
+}
+
+.stylelib-category-actions {
+    background: #92bfd5;
+    font-size: 0px;
+    padding: 0px 7px;
+}
+
+.stylelib-iconhelper {
+    display: inline-block;
+    padding: 8px 5px;
+    margin: 0px 2px;
+}
+
+.stylelib-icon-active {
+    background-color: #539abc;
+}
+
+.stylelib-icon {
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+}
+
+.stylelib-category-add, .stylelib-style-add {
+    background: url(../img/stylelib.png);
+}
+
+.stylelib-category-edit, .stylelib-style-edit{
+    background: url(../img/stylelib.png) -17px 0px;
+}
+
+.stylelib-category-remove, .stylelib-style-remove{
+    background: url(../img/stylelib.png) -34px 0px;
+}
+
+.stylelib-style-controls {
+    position: absolute;
+    right: 0px;
+    z-index: 1;
+    font-size: 0px;
+}
+
+#stylelib-styles-tab {
+    vertical-align: top;
+}
+
+/* subdialogs */
+.stylelib-subdialog {
+    border: solid 1px #8ac4df;
+    margin: 0px 12px;
+    width: 266px;
+    position: relative;
+    cursor: pointer;
+}
+
+.stylelib-subdialog-close {
+    width: 16px;
+    height: 16px;
+    background: url(../img/close.png);
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+.stylelib-subdialog-close:hover {
+    background: url(../img/close_orange.png);
+}
+
+.stylelib-subdialog-title {
+    color: black;
+    font-size: 12px;
+    font-family: Verdana;
+    font-weight: bold;
+    margin: 14px;
+}
+
+.stylelib-subdialog-helper {
+    margin: 0px 14px;
+}
+
+.stylelib-subdialog-input {
+    border: 1px solid #c9c9c9;
+    width: 100%;
+    height: 24px;
+}
+
+.stylelib-subdialog-button {
+    border-radius: 3px;
+    border: 1px solid #c9c9c9;
+    margin: 14px;
+    padding: 5px;
+    background: #e2e2e2;
+    font-family: Verdana;
+}

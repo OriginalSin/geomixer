@@ -1,0 +1,30 @@
+{
+  "name": "leaflet-tilelayer-mercator",
+  "version": "0.0.1",
+  "description": "L.TileLayer.Mercator\r ==========",
+  "main": "src/TileLayer.Mercator.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "prepublish": "npm run examples",
+    "examples": "browserify examples/browserify.js > examples/browserify_bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ScanEx/Leaflet.TileLayer.Mercator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ScanEx/Leaflet.TileLayer.Mercator/issues"
+  },
+  "homepage": "https://github.com/ScanEx/Leaflet.TileLayer.Mercator#readme",
+  "dependencies": {
+    "leaflet": "^0.7.7",
+    "leaflet-geomixer": "github:scanex/leaflet-geomixer"
+  },
+  "devDependencies": {
+    "browserify": "^12.0.1"
+  }
+}

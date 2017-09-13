@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>basic animation example</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet-src.js"></script>
+        <script src="../CssAnimation.js"></script>
+        <style type="text/css">
+            .foo {
+                border: 8px dashed #990000;
+                background: #cc0000;
+                width: 100px;
+                height: 100px;
+            }
+            .foo-animated {
+                transition: opacity .5s ease;
+            }
+            .foo-beforeAnimation-opacity {
+                opacity: 1;
+            }
+            .foo-afterAnimation-opacity {
+                opacity: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="foo"></div>
+        <button class="btn">animate</button>
+        <script>
+            var el = document.querySelector('.foo');
+            
+            var animation = new nsGmx.CssAnimation({
+                el: el, 
+                prefix: 'foo', 
+                property: 'opacity',
+                useAnimation: false
+            });
+
+            document.querySelector('.btn').addEventListener('click', function() {
+                animation.toggle().then(function() {
+                    console.log('toggled');
+                }, function(err) {
+                    console.error(err);
+                });
+            });
+        </script>
+    </body>
+</html>

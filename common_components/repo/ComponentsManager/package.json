@@ -1,0 +1,8 @@
+{
+  "name": "gmx-components-manager",
+  "version": "0.0.1",
+  "main": "componentsManager.js",
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  }
+}

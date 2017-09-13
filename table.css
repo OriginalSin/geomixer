@@ -1,0 +1,86 @@
+.scrollTable
+{
+	margin: 0 0 5px 0;
+	height: 300px;
+	width: 274px;
+}
+div.tableHeader
+{
+	width: 100%;
+}
+.tableHeader table
+{
+	border-collapse: collapse;
+	width: 100%
+}
+.tableHeader td, .tableHeader th
+{
+	background: #F0F0F0;
+	height: 20px;
+	color: #000000;
+	text-align: center;
+    font-size: 12px;
+}
+div.tableBody
+{
+	overflow-y: scroll;
+	height: 278px;
+	width: 294px;
+}
+.tableBody table
+{
+	border-collapse: collapse;
+	width: 100%;
+}
+
+div.tableBody tr.rowSelected td
+{
+	background-color: #D8E7F3;
+}
+
+.tableBody tr.hover td
+{
+	background-color: #DEDEDE;
+}
+
+.tableBody td
+{
+	color: #000000;
+	height: 20px;
+	border-bottom: 1px solid #D0D8DF;
+	border-top: 1px solid #D0D8DF;
+}
+.tableBody td input
+{
+	border: none;
+	background: transparent;
+}
+.tablePages
+{
+	height: 25px;
+	text-align: center;
+}
+.page
+{
+	color: #000000;
+	font-size: 13px;
+	font-weight: bold;
+	margin: 0px 2px;
+}
+
+.tableTableRow
+{
+	border-top: 1px solid #D0D8DF;
+	border-bottom: 1px solid #D0D8DF;
+}
+
+.tableTableRow.hover
+{
+	background-color: #DEDEDE;
+}
+
+.tableFilter
+{
+    font-size: 12px;
+    margin-left: 8px;
+}

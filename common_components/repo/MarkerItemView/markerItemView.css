@@ -1,0 +1,31 @@
+.markerItemViewExpanded, .markerItemViewCollapsed { cursor: pointer; font-size: 12px; }
+.markerItemViewExpanded-markerIcon, .markerItemViewCollapsed-markerIcon {
+    width: 20px;
+    height: 20px;
+}
+
+/* expanded view */
+
+.markerItemViewExpanded-header { display: table; width: 100%; margin-bottom: 5px; }
+.markerItemViewExpanded-markerIconContainer { display: table-cell; width: 30px; vertical-align: middle; }
+.markerItemViewExpanded-titleContainer { display: table-cell; width: 100%; vertical-align: middle; }
+
+.markerItemViewExpanded-markerIcon { padding-right: 6px;}
+.markerItemViewExpanded-title { font-weight: bold; }
+
+.markerItemViewExpanded-description { }
+
+.markerItemViewExpanded-footer { display: table; width: 100%; margin-top: 5px; }
+.markerItemViewExpanded-dateContainer { display: table-cell; width: 50%; text-align: left; vertical-align: middle; }
+.markerItemViewExpanded-locationIconContainer { display: table-cell; vertical-align: middle; }
+.markerItemViewExpanded-urlContainer { display: table-cell; width: 50%; text-align: right; vertical-align: middle; }
+
+.markerItemViewExpanded-date { }
+.markerItemViewExpanded-locationIcon { font-size: 1.5em; }
+.markerItemViewExpanded-url { }
+
+/* collapsed view */
+
+.markerItemViewCollapsed-markerIcon { float: left; padding-right: 4px; padding-bottom: 4px; }
+.markerItemViewCollapsed-date { display: inline; font-weight: bold; }
+.markerItemViewCollapsed-title { display: inline; }

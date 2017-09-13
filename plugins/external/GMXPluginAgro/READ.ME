@@ -1,0 +1,265 @@
+window.gmxPlugins.push({
+    pluginName: 'WeatherGraphicsPlugin',
+    file: 'plugins/weatherGraphics/main.js',
+    module: 'WeatherGraphicsPlugin',
+    mapPlugin: true,
+    params: {
+        proxyUrl: '',
+        exMap: { host: "maps.kosmosnimki.ru", name: "PLDYO" },
+        products: {
+            "PRECIP": {
+                caption: "Осадки",
+                name: "Precip",
+                years: [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015]
+            }
+        }
+    }
+});
+
+
+window.gmxPlugins.push({
+    pluginName: 'NDVIGraphicsPlugin',
+    file: 'plugins/ndviGraphics/main.js',
+    module: 'NDVIGraphicsPlugin',
+    mapPlugin: true,
+    params: {
+        proxyUrl: '',
+        exMap: { host: "maps.kosmosnimki.ru", name: "PLDYO" },
+        layers: {
+            "LANDSAT8": {
+                caption: "Среднее",
+                resolutionType: "LANDSAT",
+                ndviSource: true,
+                name: "2E9D38607BB4456AB9C04E2248ED5015",//"D13BFAF768A74351B2769190576D6306",
+                dateColumnName: "acqdate",
+                sceneFieldName: "sceneid",
+                ndviFunc: function (v) { return (v - 101) / 100; },
+                palette: {
+                    ndvi: {
+                        url: 'http://maps.kosmosnimki.ru/api/plugins/palettes/NDVI_interp_legend.icxleg.xml',
+                        prodtype: "NDVI"
+                    },
+                    quality: {
+                        url: 'http://maps.kosmosnimki.ru/api/plugins/palettes/legend_class_1-5.icxleg',
+                        prodtype: "FIELD"
+                    }
+                }
+            },
+            "MODIS": {
+                caption: "Низкое",
+                resolutionType: "MODIS",
+                ndviSource: true,
+                name: "3AD0B4A220D349848A383D828781DF4C",
+                dateColumnName: "lastday",
+                palette: {
+                    ndvi: {
+                        url: 'http://maps.kosmosnimki.ru/api/plugins/palettes/NDVI_interp_legend.icxleg.xml',
+                        prodtype: "NDVI16"
+                    },
+                    quality: {
+                        url: 'http://maps.kosmosnimki.ru/api/plugins/palettes/QC_grade_1-5.icxleg',
+                        prodtype: "QUALITY16"
+                    }
+                },
+                ndviFunc: function (v) {
+                    var res = (v - 1.0) / 100.0;
+                    return res;//(res <= 0.33 ? 0.0 : (res - 0.33));
+                }
+            },
+            "_HR_TEST": {
+                ndviSource: true,
+                name: "632CC0A42D06409DBD879BC1725ED53C",
+                dateColumnName: "ACQDATE",
+                resolutionType: "LANDSAT",
+                palette: {
+                    ndvi: {
+                        url: 'http://maps.kosmosnimki.ru/api/plugins/palettes/NDVI_interp_legend.icxleg.xml',
+                        prodtype: "NDVI"
+                    },
+                    quality: {
+                        url: 'http://maps.kosmosnimki.ru/api/plugins/palettes/legend_class_1-5.icxleg',
+                        prodtype: "FIELD"
+                    }
+                },
+                ndviFunc: function (v) { return (v - 101) / 100; }
+            },
+
+            "NDVI_01": {
+                admin: true,
+                caption: "NDVI01",
+                ndviSource: true,
+                name: "71125E8356F24BD797CD51F73122E982",
+                dateColumnName: "lastday",
+                resolutionType: "MODIS",
+                palette: {
+                    ndvi: {
+                        url: 'http://maps.kosmosnimki.ru/api/plugins/palettes/NDVI_interp_legend.icxleg.xml',
+                        prodtype: "NDVI16"
+                    },
+                    quality: {
+                        url: 'http://maps.kosmosnimki.ru/api/plugins/palettes/legend_class_1-5.icxleg',
+                        prodtype: "FIELD"
+                    }
+                },
+                ndviFunc: function (v) { return (v - 101) / 100; }
+            },
+            "NDVI_08": {
+                caption: "NDVI08",
+                resolutionType: "MODIS",
+                ndviSource: true,
+                name: "1321456E804C4577993D23DBC51BB7F4",
+                dateColumnName: "lastday",
+                palette: {
+                    ndvi: {
+                        url: 'http://maps.kosmosnimki.ru/api/plugins/palettes/NDVI_interp_legend.icxleg.xml',
+                        prodtype: "NDVI16"
+                    },
+                    quality: {
+                        url: 'http://maps.kosmosnimki.ru/api/plugins/palettes/legend_class_1-5.icxleg',
+                        prodtype: "FIELD"
+                    }
+                },
+                ndviFunc: function (v) { return (v - 101) / 100; }
+            },
+            "NDVI_16": {
+                caption: "NDVI16",
+                resolutionType: "MODIS",
+                ndviSource: true,
+                name: "EE36569678D94C169A3A62D64C0F2295",
+                dateColumnName: "lastday",
+                palette: {
+                    ndvi: {
+                        url: 'http://maps.kosmosnimki.ru/api/plugins/palettes/NDVI_interp_legend.icxleg.xml',
+                        prodtype: "NDVI16"
+                    },
+                    quality: {
+                        url: 'http://maps.kosmosnimki.ru/api/plugins/palettes/legend_class_1-5.icxleg',
+                        prodtype: "FIELD"
+                    }
+                },
+                ndviFunc: function (v) { return (v - 101) / 100; }
+            },
+
+            "RGB": {
+                name: "04DDB23F49F84B9A9122CBA6BC26D3ED",//""B745C9ACC4B141F8BEAECA4C4C183096",
+                dateColumnName: "acqdate",
+                sceneFieldName: "SCENEID"
+            },
+            "RGB2": {
+                name: "47A9D4E5E5AE497A8A1A7EA49C7FC336",
+                dateColumnName: "ACQDATE",
+                sceneFieldName: "SCENEID"
+            },
+            "CLASSIFICATION": {
+                name: "0C94757D72C34876AD1CFEEE9FD8E902",
+                dateColumnName: "acqdate",
+                sceneFieldName: "sceneid",
+                palette: {
+                    classification: {
+                        url: 'http://maps.kosmosnimki.ru/api/plugins/palettes/CLASS_grade_1-5.icxleg',
+                        prodtype: "CLASSIFICATION"
+                    }
+                }
+            }
+        }
+    }
+});
+
+window.gmxPlugins.push({
+    pluginName: 'NDVITimelinePlugin', file: 'plugins/ndviTimeline/main.js', module: 'NDVITimelinePlugin', mapPlugin: true,
+    params: {
+        proxyUrl: '',
+        exMap: { host: "maps.kosmosnimki.ru", name: "PLDYO" },
+        layers: {
+            "MODIS": {
+                viewTimeline: true,
+                name: "3AD0B4A220D349848A383D828781DF4C",
+                dateColumnName: "lastday",
+                palette: {
+                    ndvi: {
+                        url: 'http://maps.kosmosnimki.ru/api/plugins/palettes/NDVI_interp_legend.icxleg.xml',
+                        prodtype: "NDVI16"
+                    },
+                    quality: {
+                        url: 'http://maps.kosmosnimki.ru/api/plugins/palettes/QC_grade_1-5.icxleg',
+                        prodtype: "QUALITY16"
+                    }
+                }
+            },
+            "NDVI_08": {
+                viewTimeline: true,
+                name: "1321456E804C4577993D23DBC51BB7F4",
+                dateColumnName: "lastday",
+                palette: {
+                    ndvi: {
+                        url: 'http://maps.kosmosnimki.ru/api/plugins/palettes/NDVI_interp_legend.icxleg.xml',
+                    }
+                }
+            },
+            "NDVI_16": {
+                viewTimeline: true,
+                name: "EE36569678D94C169A3A62D64C0F2295",
+                dateColumnName: "lastday",
+                palette: {
+                    ndvi: {
+                        url: 'http://maps.kosmosnimki.ru/api/plugins/palettes/NDVI_interp_legend.icxleg.xml',
+                    }
+                }
+            },
+            "HR": {
+                name: "2E9D38607BB4456AB9C04E2248ED5015",
+                dateColumnName: "acqdate",
+                palette: {
+                    ndvi: {
+                        url: 'http://maps.kosmosnimki.ru/api/plugins/palettes/NDVI_interp_legend.icxleg.xml',
+                        prodtype: "NDVI"
+                    },
+                    quality: {
+                        url: 'http://maps.kosmosnimki.ru/api/plugins/palettes/legend_class_1-5.icxleg',
+                        prodtype: "FIELD"
+                    }
+                }
+            },
+            "RGB": {
+                viewTimeline: true,
+                name: "04DDB23F49F84B9A9122CBA6BC26D3ED",
+                dateColumnName: "ACQDATE"
+            },
+            "RGB2": {
+                name: "47A9D4E5E5AE497A8A1A7EA49C7FC336",
+                dateColumnName: "ACQDATE"
+            },
+            "CLASSIFICATION": {
+                name: "0C94757D72C34876AD1CFEEE9FD8E902",
+                dateColumnName: "acqdate",
+                palette: {
+                    classification: {
+                        url: 'http://maps.kosmosnimki.ru/api/plugins/palettes/CLASS_grade_1-5.icxleg',
+                        prodtype: "CLASSIFICATION"
+                    }
+                }
+            },
+            "FIRES": {
+                name: "F2840D287CD943C4B1122882C5B92565",
+                dateColumnName: "DateTime",
+                timelineMode: "screen"
+            }
+        },
+        combo: [{
+            caption: "Низкое разрешение",
+            rk: ["MODIS"]
+        }, {
+            caption: "Среднее разрешение",
+            rk: ["HR", "RGB", "RGB2", "CLASSIFICATION"]
+        }, {
+            caption: "NDVI_08",
+            rk: ["NDVI_08"]
+        }, {
+            caption: "NDVI_16",
+            rk: ["NDVI_16"]
+        }, {
+            caption: "Пожары",
+            rk: ["FIRES"]
+        }]
+    }
+});

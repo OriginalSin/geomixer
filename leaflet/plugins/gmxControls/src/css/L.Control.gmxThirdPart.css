@@ -1,0 +1,15 @@
+.leaflet-gmx-thirdpart {
+    height: 100%;
+    width: 100%;
+	margin: 0px;
+/*    margin-left: 6px;
+    margin-top: 6px;
+	*/
+    pointer-events: none;
+    position: absolute;
+}
+.leaflet-gmx-thirdpart svg {
+	left: 500px;
+	top: 500px;
+    position: absolute;
+}
